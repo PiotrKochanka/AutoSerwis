@@ -1,0 +1,138 @@
+@import '_mixins';
+
+.animation-container{
+    position: relative;
+    margin-top: -141px;
+    &:hover{
+        & .slick-prev, & .slick-next{
+            opacity: 0.6;
+        }
+    }
+    &:after{
+        content: '';
+        background-image: url(../graphic/animation_mask.png);
+        background-size: cover;
+        background-position: top;
+        position: absolute;
+        bottom: -20vh;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 30vh;
+    }
+    &:before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgb(8 8 24 / 45%);
+
+        z-index: 1;
+    }
+    &__mid{
+        height: 100vh;
+        max-width: 100%;
+        margin: auto;
+        display: flex;
+        position: relative;
+        background-color: #f9f9f9;
+        &__main{
+            width: 100%;
+            display: block;
+            position: relative;
+            &__human{
+                width: 500px;
+                position: absolute;
+                left: 20%;
+                margin-left: -250px;
+                z-index: 1;
+                bottom: 0%;
+                @include display-flex(center, flex-start, column, wrap);
+                & img{
+                    height: 65vh;
+                }
+            }
+            &__text{
+                width: 500px;
+                position: absolute;
+                left: 44%;
+                margin-left: -111px;
+                z-index: 1;
+                top: 50%;
+                @include display-flex(center, flex-start, column, wrap);
+                transform-style: preserve-3d;
+                & span{
+                    @include font-poppins(64px, 700, 72px, white);
+                    &:last-child{
+                        color: #477eff;
+                    }
+                }
+                &:before{
+                    content: 'Samochody to Nasza pasja!';
+                    @include font-poppins(88px, 700, 88px, rgba(236, 236, 236, 0.068));
+                    position: absolute;
+                    width: 800px;
+                    top: 6px;
+                    left: 50%;
+                    margin-left: -223px;
+                    transform: translateZ(-1px);
+                }
+            }
+            &__slider{
+                width: 100%;
+                display: block;
+                position: relative;
+                & .slick-prev{
+                    position: absolute;
+                    opacity: 0;
+                    top: 56%;
+                    left: 4%;
+                    z-index: 9;
+                    width: 48px;
+                    height: 48px;
+                    @include reset-button-animation;
+                    cursor: pointer;
+                    &:before{
+                        content: url(../graphic/arr-left.png);
+                        @include slide-button(52px, 52px, black);
+                    }
+                    &:hover{
+                        opacity: 0.4;
+                    }
+                }
+                & .slick-next{
+                    position: absolute;
+                    opacity: 0;
+                    top: 56%;
+                    right: 4%;
+                    z-index: 9;
+                    width: 48px;
+                    height: 48px;
+                    @include reset-button-animation;
+                    cursor: pointer;
+                    &:before{
+                        content: url(../graphic/arr-right.png);
+                        @include slide-button(52px, 52px, black);
+                    }
+                    &:hover{
+                        opacity: 0.4;
+                    }
+                }
+                &__slide{
+                    width: 100%;
+                    height: 100vh!important;
+                    background-position: center 150px;
+                    background-attachment: fixed;
+                    background-size: cover!important;
+                }
+            }
+        }
+    }    
+}
+
+.slick-dots{
+    display: none!important;
+}

@@ -1,0 +1,408 @@
+@import '_mixins';
+
+.start-content{
+    background-color: #f7f7f7;
+    & .mid-info{
+        &__container{
+            margin-top: -112px;
+            position: relative;
+            z-index: 3;
+            @include display-flex(center, center, row, nowrap);
+            -webkit-box-shadow: 0px 17px 30px -11px rgba(107, 107, 107, 0.59);
+            -moz-box-shadow: 0px 17px 30px -11px rgba(107, 107, 107, 0.59);
+            box-shadow: 0px 17px 30px -11px rgba(107, 107, 107, 0.59);
+            &__section{
+                &__icon{
+                    position: relative;
+                    @include display-flex(center, center, row, nowrap);
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    border: 1px solid #efefef;
+                    margin: 0 auto;
+                    & img{
+                        filter: brightness(0) saturate(100%) invert(29%) sepia(95%) saturate(2197%) hue-rotate(215deg) brightness(98%) contrast(91%);
+                        max-width: 64px;
+                        max-height: 64px;
+                    }
+                }
+                background-color: white;
+                padding: 48px;
+                text-align: center;
+                border-right: 1px solid #efefef;
+                &__text{
+                    color: grey;
+                    font-size: 14px;
+                }
+                &:last-child{
+                    border-right: 0px none transparent;
+                }
+            }
+        }
+    }
+    & .about-us{
+        padding-top: 120px;
+        padding-bottom: 160px;
+        // background-image: url(../graphic/wheel.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: -100px top;
+        background-attachment: fixed;
+        &__container{
+            &__h2{
+                width: 100%;
+                @include font-poppins(32px, 700, 30px, black);
+                text-align: center;
+                position: relative;
+                transform-style: preserve-3d;
+                &:before{
+                    content: 'O Nas';
+                    @include font-poppins(88px, 700, 30px, rgba(255, 255, 255, 0.856));
+                    position: absolute;
+                    width: 300px;
+                    top: 10px;
+                    left: 50%;
+                    margin-left: -150px;
+                    transform: translateZ(-1px);
+                }
+            }
+            &__text{
+                padding: 0 64px;
+                @include font-poppins(14px, 400, 24px, rgb(94, 94, 94));
+                text-align: center;
+            }
+        }
+        &__movies{
+            margin-top: 64px!important;
+            @include display-flex(center, center, row, nowrap);
+            gap: 32px;
+            &__movie{
+                & iframe{
+
+                }
+            }
+        }
+    }
+    & .service{
+        background-color: white;
+        margin-top: -24px;
+        padding: 120px 0 100px 0;
+        &__h2{
+            @include font-poppins(32px, 700, 30px, black);
+            margin-top: 0;
+            position: relative;
+            max-width: 1232px;
+            margin: 0 auto 120px auto;
+            transform-style: preserve-3d;
+            &:before{
+                content: 'Usługi serwisowe';
+                @include font-poppins(88px, 700, 30px, rgba(0, 0, 0, 0.048));
+                position: absolute;
+                top: 8px;
+                left: -12px;
+                transform: translateZ(-1px);
+            }
+        }
+        &__container{
+            @include display-flex(center, flex-start, row, nowrap);
+            &__col{
+                width: 50%;
+            }
+            &__col1{
+                &__img{
+                    & img{
+                        max-width: 100%;
+                        margin-left: -64px;
+                    }
+                }
+            }
+            &__col2{
+                &__ul{
+                    @include reset-list;
+                    &__li{
+                        margin-bottom: 40px;
+                        @include display-flex(flex-start, flex-start, row, nowrap);
+                        &__img{
+                            @include display-flex(center, center, row, nowrap);
+                            min-width: 110px;
+                            height: 110px;
+                            border-radius: 50%;
+                            background-color: #d14342;
+                            margin-right: 24px;
+                            margin-top: -24px;
+                        }
+                        &__text{
+                            & h2{
+                                @include font-poppins(24px, 700, 26px, black);
+                                margin-top: 0px;
+                                margin-bottom: 16px;
+                            }
+                            & span{
+                                @include font-poppins(14px, 400, 18px, grey);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .additional{
+        background-color: white;
+        margin-top: -24px;
+        padding: 120px 0 120px 0;
+        background-image: url(../graphic/uslugi_tlo_1.jpg);
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: calc(50% - 48px) 90%;
+        &__h2{
+            @include font-poppins(32px, 700, 30px, black);
+            margin-top: 0;
+            position: relative;
+            max-width: 1232px;
+            margin: 0 auto 120px auto;
+            transform-style: preserve-3d;
+            &:before{
+                content: 'Usługi dodatkowe';
+                @include font-poppins(88px, 700, 30px, rgb(243, 243, 243));
+                position: absolute;
+                top: 8px;
+                left: -12px;
+                transform: translateZ(-1px);
+            }
+        }
+        &__container{
+            @include display-flex(center, flex-start, row, nowrap);
+            gap: 32px;
+            &__col{
+                width: 50%;
+            }
+            &__col1{
+                &__ul{
+                    @include reset-list;
+                    &__li{
+                        margin-bottom: 40px;
+                        @include display-flex(flex-start, flex-start, row, nowrap);
+                        &__img{
+                            @include display-flex(center, center, row, nowrap);
+                            min-width: 110px;
+                            height: 110px;
+                            border-radius: 50%;
+                            background-color: #5085ff;
+                            margin-right: 24px;
+                            margin-top: -24px;
+                        }
+                        &__text{
+                            & h2{
+                                @include font-poppins(24px, 700, 26px, black);
+                                margin-top: 0px;
+                                margin-bottom: 16px;
+                            }
+                            & span{
+                                @include font-poppins(14px, 400, 18px, grey);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .offer{
+        background-image: url(../graphic/oferta_tlo.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-color: black;
+        margin-top: -24px;
+        padding: 140px 0px 140px 0px;
+        &__container{
+            &__h2{
+                width: 100%;
+                @include font-poppins(32px, 700, 30px, white);
+                text-align: center;
+                position: relative;
+                transform-style: preserve-3d;
+                margin-top: 0px;
+                margin-bottom: 56px;
+                &:before{
+                    content: 'Nasze realizacje';
+                    @include font-poppins(88px, 700, 30px, rgba(2, 2, 2, 0.932));
+                    position: absolute;
+                    width: 800px;
+                    top: 10px;
+                    left: 50%;
+                    margin-left: -400px;
+                    transform: translateZ(-1px);
+                }
+            }
+            &__offers{
+                @include display-flex(center, center, row, nowrap);
+                gap: 32px;
+                &__startarticle{
+                    &__icon{
+                        width: 388px;
+                        height: calc(2/3 * 320px);
+                        margin-bottom: 16px;
+                        &__img{
+                            width: 100%;
+                            height: 100%;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                        }
+                    }
+                    &__title{
+                        @include reset-link(white);
+                        @include font-poppins(16px, 600, 24px, white);
+                        &:hover{
+                            opacity: 0.6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .news{
+        background-size: cover;
+        background-position: center;
+        background-color: #f7f7f7;
+        margin-top: -24px;
+        padding: 160px 0px 160px 0px;
+        border-bottom: 8px solid #5085ff;
+        &__container{
+            &__h2{
+                width: 100%;
+                @include font-poppins(32px, 700, 30px, black);
+                text-align: center;
+                position: relative;
+                transform-style: preserve-3d;
+                margin-top: 0px;
+                margin-bottom: 56px;
+                &:before{
+                    content: 'Aktualności';
+                    @include font-poppins(88px, 700, 30px, rgba(236, 236, 236, 0.932));
+                    position: absolute;
+                    width: 600px;
+                    top: 10px;
+                    left: 50%;
+                    margin-left: -300px;
+                    transform: translateZ(-1px);
+                }
+            }
+            &__top{
+                @include display-flex(center, flex-start, row, wrap);
+                gap: 32px;
+                &__startarticle{
+                    @include display-flex(center, flex-start, column, wrap);
+                    max-width: 388px;
+                    &__icon{
+                        width: 388px;
+                        height: calc(2/3 * 320px);
+                        margin-bottom: 16px;
+                        &__img{
+                            width: 100%;
+                            height: 100%;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                        }
+                    }
+                    &__title{
+                        @include reset-link(black);
+                        @include font-poppins(16px, 700, 24px, black);
+                        margin-bottom: 8px;
+                        &:hover{
+                            opacity: 0.6;
+                        }
+                    }
+                    &__short{
+                        @include font-poppins(14px, 400, 24px, grey);
+                        max-width: 388px;
+                    }
+                }
+            }
+            &__button{
+                @include display-flex(center, center, row, wrap);
+                margin-top: 48px;
+                &__a{
+                    @include font-poppins(16px, 400, 24px, white);
+                    background-color: #d14342;
+                    @include reset-link(white);
+                    cursor: pointer;
+                    padding: 8px 24px;
+                    border-radius: 0.5rem;
+                    &:hover{
+                        background-color: #a03232;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Aktualności lista */
+.news{
+    background-size: cover;
+    background-position: center;
+    background-color: #f7f7f7;
+    margin-top: -24px;
+    padding: 200px 0px 160px 0px;
+    border-bottom: 8px solid #5085ff;
+    &__container{
+        &__h2{
+            width: 100%;
+            @include font-poppins(32px, 700, 30px, black);
+            text-align: center;
+            position: relative;
+            transform-style: preserve-3d;
+            margin-top: 0px;
+            margin-bottom: 56px;
+            &:before{
+                content: 'Aktualności';
+                @include font-poppins(88px, 700, 30px, rgba(236, 236, 236, 0.932));
+                position: absolute;
+                width: 600px;
+                top: 10px;
+                left: 50%;
+                margin-left: -300px;
+                transform: translateZ(-1px);
+            }
+        }
+        &__top{
+            @include display-flex(center, flex-start, row, wrap);
+            gap: 32px;
+            &__article{
+                @include display-flex(center, flex-start, column, wrap);
+                max-width: 388px;
+                &__icon{
+                    width: 388px;
+                    height: calc(2/3 * 320px);
+                    margin-bottom: 16px;
+                    &__img{
+                        width: 100%;
+                        height: 100%;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                    }
+                }
+                &__title{
+                    @include reset-link(black);
+                    @include font-poppins(16px, 700, 24px, black);
+                    margin-bottom: 8px;
+                    &:hover{
+                        opacity: 0.6;
+                    }
+                }
+                &__short{
+                    @include font-poppins(14px, 400, 24px, grey);
+                    max-width: 388px;
+                }
+            }
+        }
+    }
+}
+
+// Data
+.date{
+    @include font-poppins(14px, 400, 24px, #d14342);
+}

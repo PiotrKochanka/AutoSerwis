@@ -1,0 +1,106 @@
+@import '_mixins';
+
+.login-container{
+    background: radial-gradient(circle at center, #ffffff, #e6e6e6);
+    &__login{
+        max-width: 992px;
+        margin: 0 auto;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__content{
+            width: 100%;
+            &__card{
+                &__header{
+                    @include font-poppins(20px, 400, 26px, black);
+                    text-align: center;
+                    margin-bottom: 48px;
+                }
+                &__body{
+                    &__mail{
+                        display: flex;
+                        @include font-poppins(14px, 400, 26px, black);
+                        margin-bottom: 8px;
+                        gap: 16px;
+                        &__label{
+                            width: 50%;
+                            background-color: rgb(228, 228, 228);
+                            text-align: end;
+                            padding: 8px 12px;
+                            border-radius: 0.5rem;
+                        }
+                        &__text{
+                            width: 50%;
+                            & input{
+                                height: 42px;
+                                width: 100%;
+                                padding: 0 12px;
+                                border: 1px solid rgb(228, 228, 228);
+                                border-radius: 0.5rem;
+                            }
+                        }
+                    }
+                    &__password{
+                        display: flex;
+                        @include font-poppins(14px, 400, 26px, black);
+                        gap: 16px;
+                        &__label{
+                            width: 50%;
+                            background-color: rgb(228, 228, 228);
+                            text-align: end;
+                            padding: 8px 12px;
+                            border-radius: 0.5rem;
+                        }
+                        &__text{
+                            width: 50%;
+                            & input{
+                                height: 42px;
+                                width: 100%;
+                                padding: 0 12px;
+                                border: 1px solid rgb(228, 228, 228);
+                                border-radius: 0.5rem;
+                            }
+                        }
+                    }
+                    &__check{
+                        display: flex;
+                        justify-content: center;
+                        @include font-poppins(14px, 400, 26px, black);
+                        margin: 8px 8px;
+                    }
+                    &__login{
+                        display: flex;
+                        justify-content: center;
+                        &__content{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;  
+                            &__button{
+                                border: 0px none transparent;
+                                background-color: #5085ff;
+                                @include font-poppins(16px, 400, 26px, white);
+                                border-radius: 0.5rem;
+                                cursor: pointer;
+                                margin-top: 8px;
+                                margin-bottom: 4px;
+                                padding: 4px 56px;
+                                &:hover{
+                                    background-color: #326fff;
+                                }
+                            }
+                            &__link{
+                                @include reset-link(#195eff);
+                                @include font-poppins(14px, 400, 26px, #195eff);
+                                &:hover{
+                                    opacity: 0.6;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

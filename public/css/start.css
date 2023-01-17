@@ -1,0 +1,542 @@
+@charset "UTF-8";
+.start-content {
+  background-color: #f7f7f7;
+}
+.start-content .mid-info__container {
+  margin-top: -112px;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  box-shadow: 0px 17px 30px -11px rgba(107, 107, 107, 0.59);
+}
+.start-content .mid-info__container__section {
+  background-color: white;
+  padding: 48px;
+  text-align: center;
+  border-right: 1px solid #efefef;
+}
+.start-content .mid-info__container__section__icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #efefef;
+  margin: 0 auto;
+}
+.start-content .mid-info__container__section__icon img {
+  filter: brightness(0) saturate(100%) invert(29%) sepia(95%) saturate(2197%) hue-rotate(215deg) brightness(98%) contrast(91%);
+  max-width: 64px;
+  max-height: 64px;
+}
+.start-content .mid-info__container__section__text {
+  color: grey;
+  font-size: 14px;
+}
+.start-content .mid-info__container__section:last-child {
+  border-right: 0px none transparent;
+}
+.start-content .about-us {
+  padding-top: 120px;
+  padding-bottom: 160px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -100px top;
+  background-attachment: fixed;
+}
+.start-content .about-us__container__h2 {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 30px;
+  color: black;
+  text-align: center;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.start-content .about-us__container__h2:before {
+  content: "O Nas";
+  font-family: "Poppins", sans-serif;
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.856);
+  position: absolute;
+  width: 300px;
+  top: 10px;
+  left: 50%;
+  margin-left: -150px;
+  transform: translateZ(-1px);
+}
+.start-content .about-us__container__text {
+  padding: 0 64px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(94, 94, 94);
+  text-align: center;
+}
+.start-content .about-us__movies {
+  margin-top: 64px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 32px;
+}
+.start-content .service {
+  background-color: white;
+  margin-top: -24px;
+  padding: 120px 0 100px 0;
+}
+.start-content .service__h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 30px;
+  color: black;
+  margin-top: 0;
+  position: relative;
+  max-width: 1232px;
+  margin: 0 auto 120px auto;
+  transform-style: preserve-3d;
+}
+.start-content .service__h2:before {
+  content: "Usługi serwisowe";
+  font-family: "Poppins", sans-serif;
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.048);
+  position: absolute;
+  top: 8px;
+  left: -12px;
+  transform: translateZ(-1px);
+}
+.start-content .service__container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.start-content .service__container__col {
+  width: 50%;
+}
+.start-content .service__container__col1__img img {
+  max-width: 100%;
+  margin-left: -64px;
+}
+.start-content .service__container__col2__ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.start-content .service__container__col2__ul__li {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.start-content .service__container__col2__ul__li__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  min-width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #d14342;
+  margin-right: 24px;
+  margin-top: -24px;
+}
+.start-content .service__container__col2__ul__li__text h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+  color: black;
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+.start-content .service__container__col2__ul__li__text span {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: grey;
+}
+.start-content .additional {
+  background-color: white;
+  margin-top: -24px;
+  padding: 120px 0 120px 0;
+  background-image: url(../graphic/uslugi_tlo_1.jpg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: calc(50% - 48px) 90%;
+}
+.start-content .additional__h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 30px;
+  color: black;
+  margin-top: 0;
+  position: relative;
+  max-width: 1232px;
+  margin: 0 auto 120px auto;
+  transform-style: preserve-3d;
+}
+.start-content .additional__h2:before {
+  content: "Usługi dodatkowe";
+  font-family: "Poppins", sans-serif;
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 30px;
+  color: rgb(243, 243, 243);
+  position: absolute;
+  top: 8px;
+  left: -12px;
+  transform: translateZ(-1px);
+}
+.start-content .additional__container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 32px;
+}
+.start-content .additional__container__col {
+  width: 50%;
+}
+.start-content .additional__container__col1__ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.start-content .additional__container__col1__ul__li {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.start-content .additional__container__col1__ul__li__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  min-width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #5085ff;
+  margin-right: 24px;
+  margin-top: -24px;
+}
+.start-content .additional__container__col1__ul__li__text h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+  color: black;
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+.start-content .additional__container__col1__ul__li__text span {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: grey;
+}
+.start-content .offer {
+  background-image: url(../graphic/oferta_tlo.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+  margin-top: -24px;
+  padding: 140px 0px 140px 0px;
+}
+.start-content .offer__container__h2 {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 30px;
+  color: white;
+  text-align: center;
+  position: relative;
+  transform-style: preserve-3d;
+  margin-top: 0px;
+  margin-bottom: 56px;
+}
+.start-content .offer__container__h2:before {
+  content: "Nasze realizacje";
+  font-family: "Poppins", sans-serif;
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 30px;
+  color: rgba(2, 2, 2, 0.932);
+  position: absolute;
+  width: 800px;
+  top: 10px;
+  left: 50%;
+  margin-left: -400px;
+  transform: translateZ(-1px);
+}
+.start-content .offer__container__offers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 32px;
+}
+.start-content .offer__container__offers__startarticle__icon {
+  width: 388px;
+  height: 213.3333333333px;
+  margin-bottom: 16px;
+}
+.start-content .offer__container__offers__startarticle__icon__img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.start-content .offer__container__offers__startarticle__title {
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: white;
+}
+.start-content .offer__container__offers__startarticle__title:hover {
+  opacity: 0.6;
+}
+.start-content .news {
+  background-size: cover;
+  background-position: center;
+  background-color: #f7f7f7;
+  margin-top: -24px;
+  padding: 160px 0px 160px 0px;
+  border-bottom: 8px solid #5085ff;
+}
+.start-content .news__container__h2 {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 30px;
+  color: black;
+  text-align: center;
+  position: relative;
+  transform-style: preserve-3d;
+  margin-top: 0px;
+  margin-bottom: 56px;
+}
+.start-content .news__container__h2:before {
+  content: "Aktualności";
+  font-family: "Poppins", sans-serif;
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 30px;
+  color: rgba(236, 236, 236, 0.932);
+  position: absolute;
+  width: 600px;
+  top: 10px;
+  left: 50%;
+  margin-left: -300px;
+  transform: translateZ(-1px);
+}
+.start-content .news__container__top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.start-content .news__container__top__startarticle {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 388px;
+}
+.start-content .news__container__top__startarticle__icon {
+  width: 388px;
+  height: 213.3333333333px;
+  margin-bottom: 16px;
+}
+.start-content .news__container__top__startarticle__icon__img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.start-content .news__container__top__startarticle__title {
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: black;
+  margin-bottom: 8px;
+}
+.start-content .news__container__top__startarticle__title:hover {
+  opacity: 0.6;
+}
+.start-content .news__container__top__startarticle__short {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: grey;
+  max-width: 388px;
+}
+.start-content .news__container__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 48px;
+}
+.start-content .news__container__button__a {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: white;
+  background-color: #d14342;
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 8px 24px;
+  border-radius: 0.5rem;
+}
+.start-content .news__container__button__a:hover {
+  background-color: #a03232;
+}
+
+/* Aktualności lista */
+.news {
+  background-size: cover;
+  background-position: center;
+  background-color: #f7f7f7;
+  margin-top: -24px;
+  padding: 200px 0px 160px 0px;
+  border-bottom: 8px solid #5085ff;
+}
+.news__container__h2 {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 30px;
+  color: black;
+  text-align: center;
+  position: relative;
+  transform-style: preserve-3d;
+  margin-top: 0px;
+  margin-bottom: 56px;
+}
+.news__container__h2:before {
+  content: "Aktualności";
+  font-family: "Poppins", sans-serif;
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 30px;
+  color: rgba(236, 236, 236, 0.932);
+  position: absolute;
+  width: 600px;
+  top: 10px;
+  left: 50%;
+  margin-left: -300px;
+  transform: translateZ(-1px);
+}
+.news__container__top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.news__container__top__article {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 388px;
+}
+.news__container__top__article__icon {
+  width: 388px;
+  height: 213.3333333333px;
+  margin-bottom: 16px;
+}
+.news__container__top__article__icon__img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.news__container__top__article__title {
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: black;
+  margin-bottom: 8px;
+}
+.news__container__top__article__title:hover {
+  opacity: 0.6;
+}
+.news__container__top__article__short {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: grey;
+  max-width: 388px;
+}
+
+.date {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #d14342;
+}/*# sourceMappingURL=start.css.map */

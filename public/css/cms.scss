@@ -1,0 +1,133 @@
+@import '_mixins';
+
+.cms-container__content{
+    &__header{
+        background-color: rgb(107, 107, 107);
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 0 8px;
+        height: 64px;
+        &__content{
+            &__ul{
+                @include reset-list;
+                &__li{
+                    & a{
+                        @include reset-link(white);
+                        background-color: rgb(73, 73, 73);
+                        padding: 0px 24px;
+                        display: flex;
+                        @include display-flex(center, center, row, nowrap);
+                        height: 48px;
+                        border-radius: 0.5rem;
+                        @include font-poppins(16px, 400, 26px, white);
+                        &:hover{
+                            background-color: rgb(58, 58, 58);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__main{
+        display: flex;
+        &__col1{
+            min-height: 100vh;
+            width: 100%;
+            max-width: 400px;
+            padding: 64px 8px 0px 8px;
+            margin-top: -64px;
+            background-color: rgb(241, 241, 241);
+            &__title{
+                @include font-poppins(24px, 600, 26px, rgb(92, 92, 92));
+                padding: 24px 0 16px 0;
+            }
+            &__ul{
+                @include reset-list;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                &__li{
+                    & a{
+                        display: flex;
+                        width: 100%;
+                        background-color: #5085ff;
+                        @include font-poppins(16px, 400, 26px, white);
+                        padding: 8px 12px;
+                        border-radius: 0.5rem;
+                        &:hover{
+                            background-color: #326fff;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        &__col2{
+            .cms-title{
+                @include font-poppins(24px, 400, 26px, rgb(92, 92, 92));
+                margin-bottom: 16px;
+            }
+            padding: 32px;
+            width: 100%;
+            & form{
+                & .form__row{
+                    display: flex;
+                    gap: 16px;
+                    margin-bottom: 8px;
+                    max-width: 992px;
+                    & .cms-title-element{
+                        width: 100%;
+                        max-width: 488px;
+                        background-color: rgb(228, 228, 228);
+                        @include font-poppins(16px, 400, 26px, black);
+                        padding: 6px 16px;
+                        text-align: right;
+                        border-radius: 0.5rem;
+                    }
+                    & input, & select{
+                        width: 100%;
+                        max-width: 488px;
+                        border: 1px solid rgb(228, 228, 228);
+                        padding: 0 16px;
+                        border-radius: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Input file
+.file{
+    padding: 0 0px!important;
+}
+
+::-webkit-file-upload-button {
+    background: rgb(223, 223, 223);
+    cursor: pointer;
+    border: 0px none transparent;
+    padding: 0.6em;
+}
+
+/* Structure title */
+.cms-structure-title{
+    @include font-poppins(18px, 400, 26px, white);
+    margin-bottom: 0;
+    padding: 8px 16px;
+    background-color: rgb(107, 107, 107);
+}
+
+
+/* Button */
+.cms-new, .form__button{
+    @include font-poppins(16px, 400, 26px, white);
+    @include reset-link(white);
+    background-color: #5085ff;
+    padding: 8px 12px;
+    border-radius: 0.5rem;
+    border: 0px none transparent;
+    &:hover{
+        background-color: #326fff;
+        color: white;
+    }
+}

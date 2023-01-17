@@ -1,0 +1,55 @@
+@mixin reset-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+@mixin reset-link($color){
+    text-decoration-color: transparent;
+    color: $color;
+}
+
+@mixin reset-button{
+    background-color: transparent;
+    border: 0px none transparent;
+}
+
+@mixin reset-button-animation{
+    background-color: transparent;
+    border: 0px none transparent;
+    font-size: 0px;
+}
+
+@mixin slide-button($width, $height, $background){
+    @include display-flex(center, center, row, nowrap);
+    width: $width;
+    height: $height;
+    background-color: $background;
+    border-radius: 50%;
+}
+
+@mixin display-flex($justify, $align, $direction, $wrap){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin font-poppins($size, $weight, $line-height, $color){
+    font-family: 'Poppins', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin transition{
+    transition: 0.3s;
+}

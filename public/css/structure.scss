@@ -1,0 +1,17 @@
+@import '_mixins';
+
+.structure-table{
+    width: 100%;
+    & thead{
+        margin-bottom: 16px;
+        & tr{
+            & th{
+                width: 100%;
+                @include font-poppins(16px, 400, 24px, white);
+                background-color: #5085ff;
+                text-align: center;
+                
+            }
+        }
+    }
+}

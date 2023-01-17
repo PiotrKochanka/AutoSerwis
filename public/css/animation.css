@@ -1,0 +1,169 @@
+.animation-container {
+  position: relative;
+  margin-top: -141px;
+}
+.animation-container:hover .slick-prev, .animation-container:hover .slick-next {
+  opacity: 0.6;
+}
+.animation-container:after {
+  content: "";
+  background-image: url(../graphic/animation_mask.png);
+  background-size: cover;
+  background-position: top;
+  position: absolute;
+  bottom: -20vh;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 30vh;
+}
+.animation-container:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(8, 8, 24, 0.45);
+  z-index: 1;
+}
+.animation-container__mid {
+  height: 100vh;
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  position: relative;
+  background-color: #f9f9f9;
+}
+.animation-container__mid__main {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.animation-container__mid__main__human {
+  width: 500px;
+  position: absolute;
+  left: 20%;
+  margin-left: -250px;
+  z-index: 1;
+  bottom: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.animation-container__mid__main__human img {
+  height: 65vh;
+}
+.animation-container__mid__main__text {
+  width: 500px;
+  position: absolute;
+  left: 44%;
+  margin-left: -111px;
+  z-index: 1;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+}
+.animation-container__mid__main__text span {
+  font-family: "Poppins", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 72px;
+  color: white;
+}
+.animation-container__mid__main__text span:last-child {
+  color: #477eff;
+}
+.animation-container__mid__main__text:before {
+  content: "Samochody to Nasza pasja!";
+  font-family: "Poppins", sans-serif;
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 88px;
+  color: rgba(236, 236, 236, 0.068);
+  position: absolute;
+  width: 800px;
+  top: 6px;
+  left: 50%;
+  margin-left: -223px;
+  transform: translateZ(-1px);
+}
+.animation-container__mid__main__slider {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.animation-container__mid__main__slider .slick-prev {
+  position: absolute;
+  opacity: 0;
+  top: 56%;
+  left: 4%;
+  z-index: 9;
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  border: 0px none transparent;
+  font-size: 0px;
+  cursor: pointer;
+}
+.animation-container__mid__main__slider .slick-prev:before {
+  content: url(../graphic/arr-left.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 52px;
+  height: 52px;
+  background-color: black;
+  border-radius: 50%;
+}
+.animation-container__mid__main__slider .slick-prev:hover {
+  opacity: 0.4;
+}
+.animation-container__mid__main__slider .slick-next {
+  position: absolute;
+  opacity: 0;
+  top: 56%;
+  right: 4%;
+  z-index: 9;
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  border: 0px none transparent;
+  font-size: 0px;
+  cursor: pointer;
+}
+.animation-container__mid__main__slider .slick-next:before {
+  content: url(../graphic/arr-right.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 52px;
+  height: 52px;
+  background-color: black;
+  border-radius: 50%;
+}
+.animation-container__mid__main__slider .slick-next:hover {
+  opacity: 0.4;
+}
+.animation-container__mid__main__slider__slide {
+  width: 100%;
+  height: 100vh !important;
+  background-position: center 150px;
+  background-attachment: fixed;
+  background-size: cover !important;
+}
+
+.slick-dots {
+  display: none !important;
+}/*# sourceMappingURL=animation.css.map */

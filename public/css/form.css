@@ -1,0 +1,90 @@
+.cms-table {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.cms-table tr .th-view {
+  width: 100px;
+}
+.cms-table tr .work {
+  width: 64px;
+}
+.cms-table tr .th-lp {
+  width: 100px;
+}
+.cms-table tr .date {
+  width: 120px;
+}
+.cms-table tr th {
+  text-align: center;
+  background-color: #5085ff;
+  border-right: 1px solid white;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: white;
+}
+.cms-table tr td {
+  padding: 12px 16px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: black;
+}
+.cms-table tbody tr td a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
+  color: #5085ff;
+}
+.cms-table tbody tr td a .fa-eye {
+  color: #5085ff;
+}
+.cms-table tbody tr td a .fa-trash {
+  color: red;
+}
+.cms-table tbody tr td a .fa-pencil {
+  color: #ba8b19;
+}
+.cms-table tbody tr td a .fa-bars {
+  color: #CECECE;
+}
+.cms-table tbody tr td a .fa-paste {
+  color: #737373;
+}
+.cms-table tbody tr td a .fa-arrow-up-right-from-square {
+  color: #737373;
+}
+.cms-table tbody tr td button {
+  background-color: transparent;
+  border: 0px none transparent;
+}
+.cms-table tbody tr td button .fa-eye {
+  color: #5085ff;
+}
+.cms-table tbody tr td button .fa-trash {
+  color: red;
+}
+.cms-table tbody tr td button .fa-pencil {
+  color: #ba8b19;
+}
+.cms-table tbody tr td div a img {
+  max-width: 100px;
+}
+.cms-table tbody tr:nth-child(2n+1) {
+  background-color: rgb(238, 238, 238);
+}
+.cms-table tbody tr:nth-child(2n+1) td {
+  border-right: 1px solid white;
+}
+.cms-table tbody tr:nth-child(2n+2) td {
+  border-right: 1px solid rgb(238, 238, 238);
+}
+.cms-table tbody tr:nth-child(2n+2) td:last-child {
+  border-right: 0px none transparent;
+}/*# sourceMappingURL=form.css.map */
