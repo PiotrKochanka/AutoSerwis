@@ -23,7 +23,7 @@
             <td>{{ $list->menu }}</td>
             <td>
                 @if($list->menu == "informacja")
-                    <a title="{{ $list->title }}"><i class="fa fa-paste" style="font-size: 18px"></i></a>
+                    <a title="{{ $list->title }}"  href="edytuj_tresc_elementu/{{ $list->id }}"><i class="fa fa-paste" style="font-size: 18px"></i></a>
                 @elseif($list->menu == "link")
                     <a href="{{ $list->link }}" target="_blank" title="{{ $list->link }}"><i class="fa fa-arrow-up-right-from-square" style="font-size: 18px"></i></a>
                 @elseif($list->menu == "menu")
@@ -32,7 +32,7 @@
                     <a title="{{ $list->title }}"></a>
                 @endif
             </td>
-            <td><a><i class="fa fa-pencil" style="font-size: 18px"></i></a></td>
+            <td><a href="edytuj_element/{{ $list->id }}"><i class="fa fa-pencil" style="font-size: 18px"></i></a></td>
             <td><a><i class="fa fa-eye" style="font-size: 18px"></i></a></td>
             <td><a href="/home/usun-pozycje/{{ $list->id }}"><i class="fa fa-trash" style="font-size: 18px"></i></i></a></td>
         </tr>

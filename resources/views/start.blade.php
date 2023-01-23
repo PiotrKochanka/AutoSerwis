@@ -217,7 +217,7 @@
             <div class="news__container width-1 block">
                 <h2 class="news__container__h2">Aktualności</h2>
                 <div class="news__container__top">
-                    @foreach($news->take(6) as $new)
+                    @foreach($news->take(8) as $new)
                         @if($new->stop >= Carbon\Carbon::now())
                             <article class="news__container__top__article news__container__top__startarticle">
                                 <div class="news__container__top__article__icon news__container__top__startarticle__icon">

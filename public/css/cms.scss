@@ -49,11 +49,12 @@
                 &__li{
                     & a{
                         display: flex;
-                        width: 100%;
+                        // width: 100%;
                         background-color: #5085ff;
                         @include font-poppins(16px, 400, 26px, white);
                         padding: 8px 12px;
                         border-radius: 0.5rem;
+                        @include reset-link(white);
                         &:hover{
                             background-color: #326fff;
                             color: white;
@@ -126,6 +127,7 @@
     padding: 8px 12px;
     border-radius: 0.5rem;
     border: 0px none transparent;
+    cursor: pointer;
     &:hover{
         background-color: #326fff;
         color: white;

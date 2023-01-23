@@ -38,6 +38,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/home/struktura', [StructureController::class, 'index']);
 Route::get('/home/struktura/dodaj-element', [StructureController::class, 'create'])->name('cms.dodaj_element');
 Route::post('/home/struktura/zapisz-element', [StructureController::class, 'store'])->name('cms.zapisz_element');
+Route::get('/home/edytuj_element/{id}', [StructureController::class, 'showData']);
+Route::get('/home/edytuj_tresc_elementu/{id}', [StructureController::class, 'showData_info']);
+Route::post('/home/zaktualizuj_element/{id}', [StructureController::class, 'update']);
+Route::post('/home/zaktualizuj_tresc_elementu/{id}', [StructureController::class, 'update_info']);
 Route::get('/home/usun-pozycje', [StructureController::class, 'index']);
 Route::get('/home/usun-pozycje/{id}', [StructureController::class, 'destroy']);
 

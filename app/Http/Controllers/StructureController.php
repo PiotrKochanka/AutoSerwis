@@ -87,6 +87,18 @@ class StructureController extends Controller
         //
     }
 
+    public function showData($id)
+    {
+        $lists = Lists::find($id);
+        return view('cms.list-edit', compact('lists'));
+    }
+
+    public function showData_info($id)
+    {
+        $lists = Lists::find($id);
+        return view('cms.list-edit-info', compact('lists'));
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -96,9 +108,29 @@ class StructureController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $lists = Lists::find($id);
+
+        $lists->menu = $request->menu;
+
+        $lists->title = $request->title;
+
+        $lists->link = $request->link;
+
+        $lists->content = $request->content;
+
+        $lists->update();
+        return redirect()->back()->with('status','Dane zostały zmienione pomyślnie');
     }
 
+    public function update_info(Request $request, $id)
+    {
+        $lists = Lists::find($id);
+
+        $lists->content = $request->content;
+
+        $lists->update();
+        return redirect()->back()->with('status','Dane zostały zmienione pomyślnie');
+    }
     /**
      * Remove the specified resource from storage.
      *
