@@ -13,4 +13,18 @@
   color: white;
   background-color: #5085ff;
   text-align: center;
+}
+
+/* Edytor */
+.tox-tinymce {
+  width: 100%;
+}
+
+.cms-img-container {
+  background-color: rgb(228, 228, 228);
+  display: flex;
+  align-items: center;
+  padding: 16px 0px;
+  border-radius: 0.5rem;
+  margin-bottom: 8px;
 }/*# sourceMappingURL=structure.css.map */

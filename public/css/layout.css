@@ -43,7 +43,7 @@ header {
   z-index: 99;
 }
 header .header-data {
-  padding: 8px 0;
+  height: 36px;
   background-color: black;
   display: flex;
   justify-content: center;
@@ -68,28 +68,24 @@ header .header-data__container__datas {
   flex-direction: row;
   flex-wrap: nowrap;
 }
+header .header-data__container__datas p {
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+header .header-data__container__datas a {
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
+  color: white;
+}
+header .header-data__container__datas a:hover {
+  opacity: 0.6;
+}
 header .header-data__container__datas span {
   padding: 0 16px;
   display: flex;
   align-items: center;
-}
-header .header-data__container__datas span:first-child:before {
-  content: url(../graphic/ikona-telefon.png);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 8px;
-  margin-bottom: -4px;
-  filter: brightness(0) saturate(100%) invert(35%) sepia(38%) saturate(5125%) hue-rotate(213deg) brightness(97%) contrast(93%);
-}
-header .header-data__container__datas span:last-child:before {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 8px;
-  margin-bottom: -4px;
-  content: url(../graphic/ikona-mail.png);
-  filter: brightness(0) saturate(100%) invert(35%) sepia(38%) saturate(5125%) hue-rotate(213deg) brightness(97%) contrast(93%);
 }
 header .header-data__container__social {
   display: flex;
@@ -228,24 +224,6 @@ header .header-main__container__menu__menu-top-1-level li a:hover:after {
   font-size: 14px;
   margin: 6px 0;
 }
-.footer__container .column1 h2:before {
-  content: url(../graphic/ikona-telefon.png);
-  position: absolute;
-  top: 2px;
-  left: -32px;
-}
-.footer__container .column2 h2:before {
-  content: url(../graphic/ikona-zegar.png);
-  position: absolute;
-  top: 2px;
-  left: -32px;
-}
-.footer__container .column3 h2:before {
-  content: url(../graphic/ikona-marker.png);
-  position: absolute;
-  top: 2px;
-  left: -32px;
-}
 .footer__bottom {
   background-color: black;
   font-family: "Poppins", sans-serif;
@@ -269,4 +247,11 @@ header .header-main__container__menu__menu-top-1-level li a:hover:after {
 }
 .footer__bottom__container__project a:hover {
   opacity: 0.6;
+}
+
+/* Ikonka */
+.footer__container__column__img {
+  position: absolute;
+  top: 2px;
+  left: -32px;
 }/*# sourceMappingURL=layout.css.map */

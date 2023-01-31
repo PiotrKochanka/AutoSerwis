@@ -46,36 +46,30 @@ header{
     z-index: 99;
     // header info
     & .header-data{
-        padding: 8px 0;
+        height: 36px;
         background-color: black;
         @include flex-center;
         &__container{
             @include display-flex(space-between, center, row, nowrap);
             &__datas{
+                & p{
+                    margin: 0px;
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                }
+                & a{
+                    @include reset-link(white);
+                    &:hover{
+                        opacity: 0.6;
+                    }
+                }
                 @include font-poppins(14px, 300, 20px, white);
                 @include display-flex(flex-start, center, row, nowrap);
                 & span{
                     padding: 0 16px;
                     display: flex;
                     align-items: center;
-                    &:first-child:before{
-                        content: url(../graphic/ikona-telefon.png);
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin-right: 8px;
-                        margin-bottom: -4px;
-                        filter: brightness(0) saturate(100%) invert(35%) sepia(38%) saturate(5125%) hue-rotate(213deg) brightness(97%) contrast(93%);
-                    }
-                    &:last-child:before{
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin-right: 8px;
-                        margin-bottom: -4px;
-                        content: url(../graphic/ikona-mail.png);
-                        filter: brightness(0) saturate(100%) invert(35%) sepia(38%) saturate(5125%) hue-rotate(213deg) brightness(97%) contrast(93%);
-                    }
                 }
             }
             &__social{
@@ -194,28 +188,28 @@ header{
             }
         }
         & .column1{
-            & h2:before{
-                content: url(../graphic/ikona-telefon.png);
-                position: absolute;
-                top: 2px;
-                left: -32px;
-            }
+            // & h2:before{
+            //     content: url(../graphic/ikona-telefon.png);
+            //     position: absolute;
+            //     top: 2px;
+            //     left: -32px;
+            // }
         }
         & .column2{
-            & h2:before{
-                content: url(../graphic/ikona-zegar.png);
-                position: absolute;
-                top: 2px;
-                left: -32px;
-            }
+            // & h2:before{
+            //     content: url(../graphic/ikona-zegar.png);
+            //     position: absolute;
+            //     top: 2px;
+            //     left: -32px;
+            // }
         }
         & .column3{
-            & h2:before{
-                content: url(../graphic/ikona-marker.png);
-                position: absolute;
-                top: 2px;
-                left: -32px;
-            }
+            // & h2:before{
+            //     content: url(../graphic/ikona-marker.png);
+            //     position: absolute;
+            //     top: 2px;
+            //     left: -32px;
+            // }
         }
     }
     &__bottom{
@@ -234,4 +228,12 @@ header{
             }
         }
     }
+}
+
+/* Ikonka */
+
+.footer__container__column__img{
+    position: absolute;
+    top: 2px;
+    left: -32px;
 }

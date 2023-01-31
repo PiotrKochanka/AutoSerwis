@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Lists;
+use App\Models\Structure;
 use File;
 use DB;
 
@@ -17,8 +18,10 @@ class StructureController extends Controller
     public function index()
     {
         $lists = Lists::all();
+        $structures = Structure::all();
 
         return view('cms.structure', [
+            'structures' => $structures,
             'lists' => $lists,
         ]);
     }
@@ -31,9 +34,11 @@ class StructureController extends Controller
     public function create()
     {
         $lists = Lists::all();
+        $structures = Structure::all();
 
         return view('cms.list-add', [
             'lists' => $lists,
+            'structures' => $structures,
         ]);
     }
 
@@ -48,13 +53,28 @@ class StructureController extends Controller
         $this->validate($request, [
             'menu' => 'required',
             'title' => 'required',
+            'filenames.*' => 'mimes:doc,pdf,docx,zip,png,jpge,jpg,webp,webm',
         ]);
 
         $lists = new Lists();
 
+        $lists->position = $request->position;
+
         $lists->menu = $request->menu;
 
         $lists->title = $request->title;
+
+        if($request->hasfile('filenames'))
+        {
+            foreach($request->file('filenames') as $file)
+            {
+                $name = $file->getClientOriginalName();
+                $filename = time().'-'.$name;
+                if($file->move('gallery/icons', $filename)){
+                    $lists->filenames = $filename;
+                }
+            }
+        }
 
         $lists->link = $request->link;
 
@@ -90,7 +110,11 @@ class StructureController extends Controller
     public function showData($id)
     {
         $lists = Lists::find($id);
-        return view('cms.list-edit', compact('lists'));
+        $structures = Structure::all();
+        return view('cms.list-edit', [
+            'lists' => $lists,
+            'structures' => $structures,
+        ]);
     }
 
     public function showData_info($id)
@@ -114,9 +138,23 @@ class StructureController extends Controller
 
         $lists->title = $request->title;
 
-        $lists->link = $request->link;
+        if($request->hasfile('filenames'))
+        {
+            foreach($request->file('filenames') as $file)
+            {
+                $destination = 'gallery/icons/'.$lists->filenames;
+                if(File::exists($destination))
+                {
+                    File::delete($destination);
+                }
+                $name = $file->getClientOriginalName();
+                $filename = time().'-'.$name;
+                $file->move('gallery/icons/', $filename);
+                $lists->filenames = $filename;
+            }
+        }
 
-        $lists->content = $request->content;
+        $lists->link = $request->link;
 
         $lists->update();
         return redirect()->back()->with('status','Dane zostały zmienione pomyślnie');

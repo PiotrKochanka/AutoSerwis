@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/css/subpage.css">
     <link rel="stylesheet" href="/css/fontawesome.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
 
     @foreach($cores as $core)
         <link href="{{ $core->font }}" rel="stylesheet">
@@ -34,15 +35,27 @@
         <header class="width-100">
             <div class="header-data width-100">
                 <div class="header-data__container width-1">
-                    <div class="header-data__container__datas">
-                        <span>Salon Posnań: +48 513 223 139</span>
-                        <span>autoserwis@serwiss.com</span>
-                    </div>
-                    <div class="header-data__container__social">
-                        <a href="#" title="link"><img src="{{ asset('graphic/ikona-fb.png') }}" alt="facebook"></a>
-                        <a href="#" title="link"><img src="{{ asset('graphic/ikona-yt.png') }}" alt="youtube"></a>
-                        <a href="#" title="link"><img src="{{ asset('graphic/ikona-instagram.png') }}" alt="instagram"></a>
-                    </div>
+                    <?php $lists = \App\Models\Lists::all()?>
+                        <div class="header-data__container__datas">
+                            @foreach($lists as $list)
+                                @if($list->position === "01. Menu Social")
+                                    @if($list->menu == "informacja")
+                                        <span>{!! $list->content !!}</span>
+                                    @else
+                                    @endif
+                                @endif
+                            @endforeach
+                        </div>
+                        <div class="header-data__container__social">
+                            @foreach($lists as $list)
+                                @if($list->position === "01. Menu Social")
+                                    @if($list->menu == "link")
+                                        <a href="{{ $list->link }}" title="link"><img src="{{ asset('gallery/icons/'.$list->filenames) }}" alt="Image"></a>
+                                    @else
+                                    @endif
+                                @endif
+                            @endforeach
+                        </div>
                 </div>
             </div>
             <div class="header-main width-100">
@@ -52,24 +65,22 @@
                     </div>
                     <div class="header-main__container__menu">
                         <ul class="header-main__container__menu__menu-top-1-level">
-                            {{-- <li><a href="#" title="link">O Firmie</a></li>
-                            <li class="{{ (request()->is('layouts/start-layout')) ? 'active' : '' }}"><a href="/lista-aktualności" title="link">Aktualności</a></li>
-                            <li><a href="#" title="link">Realizacje</a></li>
-                            <li><a href="#" title="link">Kontakt</a></li> --}}
                             @foreach(\App\Models\Lists::all() as $list)
-                                @if($list->menu == "informacja")
-                                    <li class="header-main__container__menu__menu-top-1-level__info"><a href="/{{ $list->title }}-{{ $list->id }}" alt="{{ $list->title }}">{{ $list->title }}</a></li>
-                                @elseif($list->menu == "link")
-                                    <li class="header-main__container__menu__menu-top-1-level__link"><a href="{{ $list->link }}" alt="{{ $list->title }}" target="_blank">{{ $list->title }}</a></li>
-                                @elseif($list->menu == "aktualnosci")
-                                    <li class="header-main__container__menu__menu-top-1-level__link"><a href="/lista-aktualności" alt="{{ $list->title }}">{{ $list->title }}</a></li>
-                                @else 
-                                    <li class="header-main__container__menu__menu-top-1-level__link__menu">
-                                        <button>{{ $list->title }}</button>
-                                        <ul>
-                                        
-                                        </ul>
-                                    </li>
+                                @if($list->position === "02. Menu Górne")
+                                    @if($list->menu == "informacja")
+                                        <li class="header-main__container__menu__menu-top-1-level__info"><a href="/{{ $list->title }}-{{ $list->id }}" alt="{{ $list->title }}">{{ $list->title }}</a></li>
+                                    @elseif($list->menu == "link")
+                                        <li class="header-main__container__menu__menu-top-1-level__link"><a href="{{ $list->link }}" alt="{{ $list->title }}" target="_blank" class="header-main__container__menu__menu-top-1-level__link">{{ $list->title }}</a></li>
+                                    @elseif($list->menu == "aktualnosci")
+                                        <li class="header-main__container__menu__menu-top-1-level__link"><a href="/lista-aktualności" alt="{{ $list->title }}">{{ $list->title }}</a></li>
+                                    @else 
+                                        <li class="header-main__container__menu__menu-top-1-level__link__menu">
+                                            <button>{{ $list->title }}</button>
+                                            <ul>
+                                            
+                                            </ul>
+                                        </li>
+                                    @endif
                                 @endif
                             @endforeach
                         </ul>
@@ -87,32 +98,27 @@
         </div>
         <footer class="footer width-100">
             <div class="footer__container width-1 block">
-                <div class="footer__container__column column column1">
-                    <h2 class="footer__container__column__h2">Kontakt</h2>
-                    <div class="footer__container__column__text">
-                        <p><strong>Telefon Serwis:</strong>+48 513 223 139</p>
-                        <p><strong>Telefon Metamorfoza:</strong>+48 513 223 139</p>
-                        <p><strong>Telefon Wynajem:</strong>+48 513 223 139</p>
-                        <p><strong>E-mail:</strong> autoserwis@serwiss.com</p>
-                    </div>
-                </div>
-                <div class="footer__container__column column column2">
-                    <h2 class="footer__container__column__h2">Godziny otwarcia</h2>
-                    <div class="footer__container__column__text">
-                        <p><strong>Poniedziałek:</strong> 7:00 - 19:00</p>
-                        <p><strong>Wtorek:</strong> 7:00 - 19:00</p>
-                        <p><strong>Środa:</strong> 7:00 - 19:00</p>
-                        <p><strong>Czwartek:</strong> 7:00 - 19:00</p>
-                        <p><strong>Piątek:</strong> 7:00 - 19:00</p>
-                        <p><strong>Sobota:</strong> 9:00 - 13:00</p>
-                    </div>
-                </div>
-                <div class="footer__container__column column column3">
-                    <h2 class="footer__container__column__h2">Lokalizacja</h2>
-                    <div class="footer__container__column__text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
+                @foreach($lists as $list)
+                    @if($list->position === "07. Stopka")
+                        @if($list->menu == "informacja")
+                            <div class="footer__container__column column column1">
+                                <h2 class="footer__container__column__h2">
+                                    @if(is_null($list->filenames))
+                                    @else
+                                        <div class="footer__container__column__img">
+                                            <img src="../gallery/icons/{{ $list->filenames }}" alt="{{ $list->title }}">
+                                        </div>
+                                    @endif
+                                    {{ $list->title }}
+                                </h2>
+                                <div class="footer__container__column__text">
+                                    {!! $list->content !!}
+                                </div>
+                            </div>
+                        @else 
+                        @endif 
+                    @endif 
+                @endforeach
             </div>
             <div class="footer__bottom width-100">
                 <div class="footer__bottom__container width-1 block">

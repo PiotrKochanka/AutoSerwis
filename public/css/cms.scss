@@ -78,6 +78,7 @@
                     max-width: 992px;
                     & .cms-title-element{
                         width: 100%;
+                        min-width: 488px;
                         max-width: 488px;
                         background-color: rgb(228, 228, 228);
                         @include font-poppins(16px, 400, 26px, black);
@@ -87,7 +88,8 @@
                     }
                     & input, & select{
                         width: 100%;
-                        max-width: 488px;
+                        // min-width: 488px;
+                        // max-width: 488px;
                         border: 1px solid rgb(228, 228, 228);
                         padding: 0 16px;
                         border-radius: 0.5rem;
@@ -108,6 +110,7 @@
     cursor: pointer;
     border: 0px none transparent;
     padding: 0.6em;
+    height: 100%;
 }
 
 /* Structure title */

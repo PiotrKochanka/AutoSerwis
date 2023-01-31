@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('lists', function (Blueprint $table) {
             $table->id();
+            $table->string('position');
             $table->string('menu');
             $table->string('title');
             $table->string('link')->nullable();

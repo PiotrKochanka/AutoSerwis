@@ -27,6 +27,10 @@
                     <li class="cms-container__content__main__col1__ul__li">
                         <a class="dropdown-item" href="/home/struktura">Struktura</a>
                     </li>
+                </ul>
+                <br/>
+                <div class="cms-container__content__main__col1__title">Moduły</div>
+                <ul class="cms-container__content__main__col1__ul">
                     <li class="cms-container__content__main__col1__ul__li">
                         <a class="dropdown-item" href="/home/animacja">Animacja</a>
                     </li>

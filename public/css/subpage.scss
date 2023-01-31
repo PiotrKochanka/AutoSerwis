@@ -13,6 +13,10 @@
         padding: 16px 0;
     }
     &__content{
+        & img{
+            max-width: 100%;
+            height: max-content;
+        }
         padding-top: 180px;
         &__all{
             @include font-poppins(14px, 400, 24px, grey);
@@ -56,7 +60,7 @@
                     flex-direction: column;
                     &__title{
                         @include reset-link(black);
-                        @include font-poppins(16px, 700, 24px, black);
+                        @include font-poppins(18px, 700, 24px, black);
                         margin-bottom: 8px;
                         &:hover{
                             opacity: 0.6;

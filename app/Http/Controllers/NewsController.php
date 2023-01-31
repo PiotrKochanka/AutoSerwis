@@ -150,7 +150,7 @@ class NewsController extends Controller
         {
             foreach($request->file('filenames') as $file)
             {
-                $destination = 'gallery/news/'.$animations->filenames;
+                $destination = 'gallery/news/'.$news->filenames;
                 if(File::exists($destination))
                 {
                     File::delete($destination);
@@ -158,7 +158,7 @@ class NewsController extends Controller
                 $name = $file->getClientOriginalName();
                 $filename = time().'-'.$name;
                 $file->move('gallery/news/', $filename);
-                $animations->filenames = $filename;
+                $news->filenames = $filename;
             }
         }
         $news->content = $request->content;

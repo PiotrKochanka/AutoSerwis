@@ -10,6 +10,7 @@ class Lists extends Model
     use HasFactory;
 
     protected $fillable = [
+        'position',
         'menu',
         'title',
         'link',

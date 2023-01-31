@@ -29,7 +29,10 @@
         <div class="cms-title-element"><span>Grafika</span></div>
         <input type="file" name="filenames[]" class="file">
     </div>
-    <div class="cms-img-container" style="display: flex; justify-content: center; width: 100%; max-width: 992px;"><img src="{{ asset('gallery/news/'.$news->filenames) }}" width="400px" style="margin-bottom: 8px" alt="Image"></div>
+    @if($news['filenames'] == '')
+    @else
+        <div class="cms-img-container" style="display: flex; justify-content: center; width: 100%; max-width: 992px;"><img src="{{ asset('gallery/news/'.$news->filenames) }}" width="400px" style="margin-bottom: 8px" alt="Image"></div>
+    @endif
     <div class="form__row">
         <textarea id="myTextarea" class="form-control @error('myTextarea') is-invalid @enderror" name="content" required autocomplete="new-content">  
             {{$news['content']}}

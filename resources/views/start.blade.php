@@ -24,59 +24,50 @@
         <!--Menu pod animacją-->
         <div class="mid-info width-1 block">
             <div class="mid-info__container">
-                <div class="mid-info__container__section">
-                    <div class="mid-info__container__section__icon"><img src="../graphic/jakosc.png" alt="Jakość"></div>
-                    <h2 class="mid-info__container__section__title">Gwarancja jakości</h2>
-                    <div class="mid-info__container__section__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    </div>
-                </div>
-                <div class="mid-info__container__section">
-                    <div class="mid-info__container__section__icon"><img src="../graphic/doradztwo.png" alt="Doradztwo"></div>
-                    <h2 class="mid-info__container__section__title">Profesjonalne doradztwo</h2>
-                    <div class="mid-info__container__section__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    </div>
-                </div>
-                <div class="mid-info__container__section">
-                    <div class="mid-info__container__section__icon"><img src="../graphic/service.png" alt="Serwis"></div>
-                    <h2 class="mid-info__container__section__title">Serwis</h2>
-                    <div class="mid-info__container__section__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    </div>
-                </div>
+                @foreach( $lists as $list )
+                    @if( $list->position === "03. Informacje pod animacją")
+                        @if( $list->menu == "informacja")
+                        <div class="mid-info__container__section">
+                            @if(is_null($list->filenames))
+                            @else 
+                                <div class="mid-info__container__section__icon"><img src="../gallery/icons/{{ $list->filenames }}" alt="{{ $list->title }}"></div>
+                            @endif
+                            <h2 class="mid-info__container__section__title">{{ $list->title }}</h2>
+                            <div class="mid-info__container__section__text">
+                                {!! $list->content !!}
+                            </div>
+                        </div>
+                        @else
+                        @endif
+                    @endif
+                @endforeach
             </div>
         </div>
         <!--O Nas-->
         <div class="about-us width-100">
-            <div class="about-us__container width-1 block">
-                <h2 class="about-us__container__h2">O Nas</h2>
-                <div class="about-us__container__text">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
-                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
-                    adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                </div>
-            </div>
-            <div class="about-us__movies width-1 block">
-                <div class="about-us__movies__movie">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RVI23gUPfbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                <div class="about-us__movies__movie">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RVI23gUPfbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </div>
+            @foreach( $lists as $list )
+                @if( $list->position === "04. O Nas")
+                    @if( $list->menu == "informacja")
+                        <div class="about-us__container width-1 block">
+                            <h2 class="about-us__container__h2"><div class="about-us__container__h2__back">{{ $list->title }}</div>{{ $list->title }}</h2>
+                            <div class="about-us__container__text">
+                                {!! $list->content !!}
+                            </div>
+                        </div>
+                        <div class="about-us__movies width-1 block">
+                            <div class="about-us__movies__movie">
+                                @if(is_null($list->link))
+                                @else
+                                    <iframe width="560" height="315" src="{{ $list->link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                @endif
+                            </div>
+                        </div>
+                    @elseif( $list->menu == "link") 
+                        <div class="about-us__link"><a class="about-us__link__button" href="{{ $list->link }}">{{ $list->title }}</a></div>
+                    @else
+                    @endif
+                @endif
+            @endforeach
         </div>
         <!--Usługi serwisowe-->
         <div class="service width-100">
@@ -89,45 +80,24 @@
                 </div>
                 <div class="service__container__col2 service__container__col">
                     <ul class="service__container__col2__ul">
-                        <li class="service__container__col2__ul__li">
-                            <div class="service__container__col2__ul__li__img">
-                                <img src="../graphic/serwis.png" alt="ikona">
-                            </div>
-                            <div class="service__container__col2__ul__li__text">
-                                <h2>Serwis samochodowy</h2>
-                                <span>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                </span>
-                            </div>
-                        </li>
-                        <li class="service__container__col2__ul__li">
-                            <div class="service__container__col2__ul__li__img">
-                                <img src="../graphic/pomoc.png" alt="ikona">
-                            </div>
-                            <div class="service__container__col2__ul__li__text">
-                                <h2>Pomoc drogowa</h2>
-                                <span>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                </span>
-                            </div>
-                        </li>
-                        <li class="service__container__col2__ul__li">
-                            <div class="service__container__col2__ul__li__img">
-                                <img src="../graphic/auto.png" alt="ikona">
-                            </div>
-                            <div class="service__container__col2__ul__li__text">
-                                <h2>Auto zastępcze</h2>
-                                <span>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                </span>
-                            </div>
-                        </li>
+                        @foreach( $lists as $list )
+                            @if( $list->position === "05. Usługi serwisowe")
+                                @if( $list->menu == "informacja")
+                                    <li class="service__container__col2__ul__li">
+                                        <div class="service__container__col2__ul__li__img">
+                                            <img src="../gallery/icons/{{ $list->filenames }}" alt="{{ $list->title }}">
+                                        </div>
+                                        <div class="service__container__col2__ul__li__text">
+                                            <h2>{{ $list->title }}</h2>
+                                            <span>
+                                                {!! $list->content !!}
+                                            </span>
+                                        </div>
+                                    </li>
+                                @else
+                                @endif
+                            @endif 
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -138,45 +108,24 @@
             <div class="additional__container width-1 block">
                 <div class="additional__container__col1 additional__container__col">
                     <ul class="additional__container__col1__ul">
-                        <li class="additional__container__col1__ul__li">
-                            <div class="additional__container__col1__ul__li__img">
-                                <img src="../graphic/serwis.png" alt="ikona">
-                            </div>
-                            <div class="additional__container__col1__ul__li__text">
-                                <h2>Auta premium</h2>
-                                <span>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                </span>
-                            </div>
-                        </li>
-                        <li class="additional__container__col1__ul__li">
-                            <div class="additional__container__col1__ul__li__img">
-                                <img src="../graphic/pomoc.png" alt="ikona">
-                            </div>
-                            <div class="additional__container__col1__ul__li__text">
-                                <h2>Metamorfoza aut</h2>
-                                <span>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                </span>
-                            </div>
-                        </li>
-                        <li class="additional__container__col1__ul__li">
-                            <div class="additional__container__col1__ul__li__img">
-                                <img src="../graphic/auto.png" alt="ikona">
-                            </div>
-                            <div class="additional__container__col1__ul__li__text">
-                                <h2>Wynajem aut</h2>
-                                <span>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                </span>
-                            </div>
-                        </li>
+                        @foreach( $lists as $list )
+                            @if( $list->position === "06. Usługi dodatkowe")
+                                @if( $list->menu == "informacja")
+                                    <li class="additional__container__col1__ul__li">
+                                        <div class="additional__container__col1__ul__li__img">
+                                            <img src="../gallery/icons/{{ $list->filenames }}" alt="{{ $list->title }}">
+                                        </div>
+                                        <div class="additional__container__col1__ul__li__text">
+                                            <h2>{{ $list->title }}</h2>
+                                            <span>
+                                                {!! $list->content !!}
+                                            </span>
+                                        </div>
+                                    </li>
+                                @else
+                                @endif
+                            @endif 
+                        @endforeach
                     </ul>
                 </div>
                 <div class="additional__container__col2 additional__container__col">

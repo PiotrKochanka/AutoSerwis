@@ -7,11 +7,13 @@
             margin-top: -112px;
             position: relative;
             z-index: 3;
-            @include display-flex(center, center, row, nowrap);
+            width: 100%;
             -webkit-box-shadow: 0px 17px 30px -11px rgba(107, 107, 107, 0.59);
             -moz-box-shadow: 0px 17px 30px -11px rgba(107, 107, 107, 0.59);
             box-shadow: 0px 17px 30px -11px rgba(107, 107, 107, 0.59);
+            @include display-flex(center, stretch, row, nowrap);
             &__section{
+                width: 100%;
                 &__icon{
                     position: relative;
                     @include display-flex(center, center, row, nowrap);
@@ -48,6 +50,22 @@
         background-repeat: no-repeat;
         background-position: -100px top;
         background-attachment: fixed;
+        &__link{
+            width: 100%;
+            @include display-flex(center, center, row, nowrap);
+            margin-top: 48px;
+            &__button{
+                margin: 0 auto;
+                padding: 8px 24px;
+                border-radius: 0.5rem;
+                font-weight: 500;
+                background-color: #d14342;
+                @include reset-link(white);
+                &:hover{
+                    background-color: #a03232;
+                }
+            }
+        }
         &__container{
             &__h2{
                 width: 100%;
@@ -55,8 +73,7 @@
                 text-align: center;
                 position: relative;
                 transform-style: preserve-3d;
-                &:before{
-                    content: 'O Nas';
+                &__back{
                     @include font-poppins(88px, 700, 30px, rgba(255, 255, 255, 0.856));
                     position: absolute;
                     width: 300px;
@@ -308,7 +325,7 @@
                     }
                     &__title{
                         @include reset-link(black);
-                        @include font-poppins(16px, 700, 24px, black);
+                        @include font-poppins(18px, 700, 24px, black);
                         margin-bottom: 8px;
                         &:hover{
                             opacity: 0.6;
@@ -387,7 +404,7 @@
                 }
                 &__title{
                     @include reset-link(black);
-                    @include font-poppins(16px, 700, 24px, black);
+                    @include font-poppins(18px, 700, 24px, black);
                     margin-bottom: 8px;
                     &:hover{
                         opacity: 0.6;

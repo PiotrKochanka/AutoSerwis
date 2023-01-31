@@ -6,14 +6,16 @@
   margin-top: -112px;
   position: relative;
   z-index: 3;
+  width: 100%;
+  box-shadow: 0px 17px 30px -11px rgba(107, 107, 107, 0.59);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   flex-direction: row;
   flex-wrap: nowrap;
-  box-shadow: 0px 17px 30px -11px rgba(107, 107, 107, 0.59);
 }
 .start-content .mid-info__container__section {
+  width: 100%;
   background-color: white;
   padding: 48px;
   text-align: center;
@@ -52,6 +54,28 @@
   background-position: -100px top;
   background-attachment: fixed;
 }
+.start-content .about-us__link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 48px;
+}
+.start-content .about-us__link__button {
+  margin: 0 auto;
+  padding: 8px 24px;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  background-color: #d14342;
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
+  color: white;
+}
+.start-content .about-us__link__button:hover {
+  background-color: #a03232;
+}
 .start-content .about-us__container__h2 {
   width: 100%;
   font-family: "Poppins", sans-serif;
@@ -63,8 +87,7 @@
   position: relative;
   transform-style: preserve-3d;
 }
-.start-content .about-us__container__h2:before {
-  content: "O Nas";
+.start-content .about-us__container__h2__back {
   font-family: "Poppins", sans-serif;
   font-size: 88px;
   font-weight: 700;
@@ -403,7 +426,7 @@
           text-decoration-color: transparent;
   color: black;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   color: black;
@@ -515,7 +538,7 @@
           text-decoration-color: transparent;
   color: black;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   color: black;
