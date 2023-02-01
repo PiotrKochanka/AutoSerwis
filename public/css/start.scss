@@ -50,7 +50,10 @@
         background-repeat: no-repeat;
         background-position: -100px top;
         background-attachment: fixed;
+        position: relative;
         &__link{
+            z-index: 2;
+            position: relative;
             width: 100%;
             @include display-flex(center, center, row, nowrap);
             margin-top: 48px;
@@ -67,6 +70,8 @@
             }
         }
         &__container{
+            z-index: 2;
+            position: relative;
             &__h2{
                 width: 100%;
                 @include font-poppins(32px, 700, 30px, black);
@@ -90,6 +95,8 @@
             }
         }
         &__movies{
+            z-index: 2;
+            position: relative;
             margin-top: 64px!important;
             @include display-flex(center, center, row, nowrap);
             gap: 32px;
@@ -423,3 +430,29 @@
 .date{
     @include font-poppins(14px, 400, 24px, #d14342);
 }
+
+// Lottiefiles 
+
+#lottie-icon{
+    width: 400px;
+    height: 400px;
+}
+
+// lottie-player {
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left:0;
+//     right: 0;
+//     z-index: -1;
+//   }
+
+// .background-lottie {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     left: 0;
+//     top: 0;
+//     min-inline-size: max-content;
+//     z-index: -1000;
+// }

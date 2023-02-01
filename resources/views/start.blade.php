@@ -68,6 +68,23 @@
                     @endif
                 @endif
             @endforeach
+            <div id="lottie-bg">
+                {{-- <lottie-player id="firstLottie" src="https://assets6.lottiefiles.com/private_files/lf30_znoq3xkc.json" style="background-color: #f7f7f7; position: absolute; bottom: 0px;" preserveAspectRatio="xMinYMin slice"></lottie-player> --}}
+                <lottie-player id="firstLottie" src="https://assets6.lottiefiles.com/packages/lf20_kecmw5x9.json" style="opacity: 0.04; background-color: #f7f7f7; position: absolute; right: 17vw; bottom: 23px; width: 65vw" preserveAspectRatio="xMinYMin slice"></lottie-player>
+            </div>
+            <script>
+                LottieInteractivity.create({
+                player:'#firstLottie',
+                mode:"scroll",
+                    actions: [
+                    {
+                        visibility:[0, 1.0],
+                        type: "seek",
+                        frames: [0, 60],
+                    },
+                    ]
+                });
+            </script>
         </div>
         <!--Usługi serwisowe-->
         <div class="service width-100">
@@ -211,5 +228,4 @@
             </div>
         </div> --}}
     </div>
-
 @endsection

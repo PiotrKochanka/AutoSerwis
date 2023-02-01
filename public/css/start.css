@@ -53,8 +53,11 @@
   background-repeat: no-repeat;
   background-position: -100px top;
   background-attachment: fixed;
+  position: relative;
 }
 .start-content .about-us__link {
+  z-index: 2;
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -75,6 +78,10 @@
 }
 .start-content .about-us__link__button:hover {
   background-color: #a03232;
+}
+.start-content .about-us__container {
+  z-index: 2;
+  position: relative;
 }
 .start-content .about-us__container__h2 {
   width: 100%;
@@ -110,6 +117,8 @@
   text-align: center;
 }
 .start-content .about-us__movies {
+  z-index: 2;
+  position: relative;
   margin-top: 64px !important;
   display: flex;
   justify-content: center;
@@ -562,4 +571,9 @@
   font-weight: 400;
   line-height: 24px;
   color: #d14342;
+}
+
+#lottie-icon {
+  width: 400px;
+  height: 400px;
 }/*# sourceMappingURL=start.css.map */

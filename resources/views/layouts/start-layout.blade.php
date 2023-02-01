@@ -13,7 +13,10 @@
     <script type="text/javascript" src="{{ URL::asset('js/header.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/paralax.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/form.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/lottiefiles.js') }}"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 
     <!-- Css -->
     <link rel="stylesheet" href="/css/layout.css">

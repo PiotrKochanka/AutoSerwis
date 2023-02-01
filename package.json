@@ -16,6 +16,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-        "@fancyapps/ui": "^4.0.31"
+        "@fancyapps/ui": "^4.0.31",
+        "@lottiefiles/lottie-interactivity": "^1.6.1"
     }
 }
