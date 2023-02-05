@@ -82,7 +82,7 @@ class StructureController extends Controller
 
         $lists->save();
 
-        return redirect('/home');
+        return redirect("/home/struktura")->with('status','Udało się dodać element');
     }
 
     /**

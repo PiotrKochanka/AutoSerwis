@@ -75,6 +75,13 @@ foreach($news as $new){
     Route::get('/'.$new->title.'-'.$new->id, [StartController::class, 'subpage']);
 }
 
-
+// Użytkownicy
+Route::get('/home/uzytkownicy', [App\Http\Controllers\UserController::class, 'index'])->name('users');
+Route::get('/home/uzytkownicy/dodaj-uzytkownika', [App\Http\Controllers\UserController::class, 'create'])->name('cms.dodaj_uzytkownika');
+Route::post('/home/uzytkownicy/zapisz', [App\Http\Controllers\UserController::class, 'store'])->name('cms.zapisz_uzytkownika');
+Route::get('delete-records','DeleteUserController@index');
+Route::get('delete/{id}', [App\Http\Controllers\DeleteUserController::class, 'destroy']);
+Route::get('users/edytuj_uzytkownika/{id}', [App\Http\Controllers\UserController::class, 'showData']);
+Route::post('users/edytuj_uzytkownika', [App\Http\Controllers\UserController::class, 'update']);
 
 

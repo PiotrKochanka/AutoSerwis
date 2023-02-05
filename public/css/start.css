@@ -2,11 +2,14 @@
 .start-content {
   background-color: #f7f7f7;
 }
+
 .start-content .mid-info__container {
   margin-top: -112px;
   position: relative;
   z-index: 3;
   width: 100%;
+  -webkit-box-shadow: 0px 17px 30px -11px rgba(107, 107, 107, 0.59);
+  -moz-box-shadow: 0px 17px 30px -11px rgba(107, 107, 107, 0.59);
   box-shadow: 0px 17px 30px -11px rgba(107, 107, 107, 0.59);
   display: flex;
   justify-content: center;
@@ -14,6 +17,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
 }
+
 .start-content .mid-info__container__section {
   width: 100%;
   background-color: white;
@@ -21,6 +25,7 @@
   text-align: center;
   border-right: 1px solid #efefef;
 }
+
 .start-content .mid-info__container__section__icon {
   position: relative;
   display: flex;
@@ -34,18 +39,22 @@
   border: 1px solid #efefef;
   margin: 0 auto;
 }
+
 .start-content .mid-info__container__section__icon img {
   filter: brightness(0) saturate(100%) invert(29%) sepia(95%) saturate(2197%) hue-rotate(215deg) brightness(98%) contrast(91%);
   max-width: 64px;
   max-height: 64px;
 }
+
 .start-content .mid-info__container__section__text {
   color: grey;
   font-size: 14px;
 }
+
 .start-content .mid-info__container__section:last-child {
   border-right: 0px none transparent;
 }
+
 .start-content .about-us {
   padding-top: 120px;
   padding-bottom: 160px;
@@ -55,6 +64,7 @@
   background-attachment: fixed;
   position: relative;
 }
+
 .start-content .about-us__link {
   z-index: 2;
   position: relative;
@@ -66,26 +76,29 @@
   flex-wrap: nowrap;
   margin-top: 48px;
 }
+
 .start-content .about-us__link__button {
   margin: 0 auto;
   padding: 8px 24px;
   border-radius: 0.5rem;
   font-weight: 500;
   background-color: #d14342;
-  -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  text-decoration-color: transparent;
   color: white;
 }
+
 .start-content .about-us__link__button:hover {
   background-color: #a03232;
 }
+
 .start-content .about-us__container {
   z-index: 2;
   position: relative;
 }
+
 .start-content .about-us__container__h2 {
   width: 100%;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 30px;
@@ -94,8 +107,9 @@
   position: relative;
   transform-style: preserve-3d;
 }
+
 .start-content .about-us__container__h2__back {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 88px;
   font-weight: 700;
   line-height: 30px;
@@ -107,15 +121,17 @@
   margin-left: -150px;
   transform: translateZ(-1px);
 }
+
 .start-content .about-us__container__text {
   padding: 0 64px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  color: rgb(94, 94, 94);
+  color: #5e5e5e;
   text-align: center;
 }
+
 .start-content .about-us__movies {
   z-index: 2;
   position: relative;
@@ -127,13 +143,15 @@
   flex-wrap: nowrap;
   gap: 32px;
 }
+
 .start-content .service {
   background-color: white;
   margin-top: -24px;
   padding: 120px 0 100px 0;
 }
+
 .start-content .service__h2 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 30px;
@@ -144,9 +162,10 @@
   margin: 0 auto 120px auto;
   transform-style: preserve-3d;
 }
+
 .start-content .service__h2:before {
-  content: "Usługi serwisowe";
-  font-family: "Poppins", sans-serif;
+  content: 'Usługi serwisowe';
+  font-family: 'Poppins', sans-serif;
   font-size: 88px;
   font-weight: 700;
   line-height: 30px;
@@ -156,6 +175,7 @@
   left: -12px;
   transform: translateZ(-1px);
 }
+
 .start-content .service__container {
   display: flex;
   justify-content: center;
@@ -163,18 +183,22 @@
   flex-direction: row;
   flex-wrap: nowrap;
 }
+
 .start-content .service__container__col {
   width: 50%;
 }
+
 .start-content .service__container__col1__img img {
   max-width: 100%;
   margin-left: -64px;
 }
+
 .start-content .service__container__col2__ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
+
 .start-content .service__container__col2__ul__li {
   margin-bottom: 40px;
   display: flex;
@@ -183,6 +207,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
 }
+
 .start-content .service__container__col2__ul__li__img {
   display: flex;
   justify-content: center;
@@ -196,8 +221,9 @@
   margin-right: 24px;
   margin-top: -24px;
 }
+
 .start-content .service__container__col2__ul__li__text h2 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 26px;
@@ -205,13 +231,15 @@
   margin-top: 0px;
   margin-bottom: 16px;
 }
+
 .start-content .service__container__col2__ul__li__text span {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 26px;
   color: grey;
 }
+
 .start-content .additional {
   background-color: white;
   margin-top: -24px;
@@ -221,8 +249,9 @@
   background-repeat: no-repeat;
   background-size: calc(50% - 48px) 90%;
 }
+
 .start-content .additional__h2 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 30px;
@@ -233,18 +262,20 @@
   margin: 0 auto 120px auto;
   transform-style: preserve-3d;
 }
+
 .start-content .additional__h2:before {
-  content: "Usługi dodatkowe";
-  font-family: "Poppins", sans-serif;
+  content: 'Usługi dodatkowe';
+  font-family: 'Poppins', sans-serif;
   font-size: 88px;
   font-weight: 700;
   line-height: 30px;
-  color: rgb(243, 243, 243);
+  color: #f3f3f3;
   position: absolute;
   top: 8px;
   left: -12px;
   transform: translateZ(-1px);
 }
+
 .start-content .additional__container {
   display: flex;
   justify-content: center;
@@ -253,14 +284,17 @@
   flex-wrap: nowrap;
   gap: 32px;
 }
+
 .start-content .additional__container__col {
   width: 50%;
 }
+
 .start-content .additional__container__col1__ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
+
 .start-content .additional__container__col1__ul__li {
   margin-bottom: 40px;
   display: flex;
@@ -269,6 +303,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
 }
+
 .start-content .additional__container__col1__ul__li__img {
   display: flex;
   justify-content: center;
@@ -282,8 +317,9 @@
   margin-right: 24px;
   margin-top: -24px;
 }
+
 .start-content .additional__container__col1__ul__li__text h2 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 26px;
@@ -291,13 +327,15 @@
   margin-top: 0px;
   margin-bottom: 16px;
 }
+
 .start-content .additional__container__col1__ul__li__text span {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 26px;
   color: grey;
 }
+
 .start-content .offer {
   background-image: url(../graphic/oferta_tlo.jpg);
   background-attachment: fixed;
@@ -307,9 +345,10 @@
   margin-top: -24px;
   padding: 140px 0px 140px 0px;
 }
+
 .start-content .offer__container__h2 {
   width: 100%;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 30px;
@@ -320,9 +359,10 @@
   margin-top: 0px;
   margin-bottom: 56px;
 }
+
 .start-content .offer__container__h2:before {
-  content: "Nasze realizacje";
-  font-family: "Poppins", sans-serif;
+  content: 'Nasze realizacje';
+  font-family: 'Poppins', sans-serif;
   font-size: 88px;
   font-weight: 700;
   line-height: 30px;
@@ -334,6 +374,7 @@
   margin-left: -400px;
   transform: translateZ(-1px);
 }
+
 .start-content .offer__container__offers {
   display: flex;
   justify-content: center;
@@ -342,11 +383,13 @@
   flex-wrap: nowrap;
   gap: 32px;
 }
+
 .start-content .offer__container__offers__startarticle__icon {
   width: 388px;
-  height: 213.3333333333px;
+  height: calc(2/3 * 320px);
   margin-bottom: 16px;
 }
+
 .start-content .offer__container__offers__startarticle__icon__img {
   width: 100%;
   height: 100%;
@@ -354,19 +397,21 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
+
 .start-content .offer__container__offers__startarticle__title {
-  -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  text-decoration-color: transparent;
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
   color: white;
 }
+
 .start-content .offer__container__offers__startarticle__title:hover {
   opacity: 0.6;
 }
+
 .start-content .news {
   background-size: cover;
   background-position: center;
@@ -375,9 +420,10 @@
   padding: 160px 0px 160px 0px;
   border-bottom: 8px solid #5085ff;
 }
+
 .start-content .news__container__h2 {
   width: 100%;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 30px;
@@ -388,9 +434,10 @@
   margin-top: 0px;
   margin-bottom: 56px;
 }
+
 .start-content .news__container__h2:before {
-  content: "Aktualności";
-  font-family: "Poppins", sans-serif;
+  content: 'Aktualności';
+  font-family: 'Poppins', sans-serif;
   font-size: 88px;
   font-weight: 700;
   line-height: 30px;
@@ -402,6 +449,7 @@
   margin-left: -300px;
   transform: translateZ(-1px);
 }
+
 .start-content .news__container__top {
   display: flex;
   justify-content: center;
@@ -410,6 +458,7 @@
   flex-wrap: wrap;
   gap: 32px;
 }
+
 .start-content .news__container__top__startarticle {
   display: flex;
   justify-content: center;
@@ -418,11 +467,13 @@
   flex-wrap: wrap;
   max-width: 388px;
 }
+
 .start-content .news__container__top__startarticle__icon {
   width: 388px;
-  height: 213.3333333333px;
+  height: calc(2/3 * 320px);
   margin-bottom: 16px;
 }
+
 .start-content .news__container__top__startarticle__icon__img {
   width: 100%;
   height: 100%;
@@ -430,28 +481,31 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
+
 .start-content .news__container__top__startarticle__title {
-  -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  text-decoration-color: transparent;
   color: black;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   color: black;
   margin-bottom: 8px;
 }
+
 .start-content .news__container__top__startarticle__title:hover {
   opacity: 0.6;
 }
+
 .start-content .news__container__top__startarticle__short {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
   color: grey;
   max-width: 388px;
 }
+
 .start-content .news__container__button {
   display: flex;
   justify-content: center;
@@ -460,20 +514,21 @@
   flex-wrap: wrap;
   margin-top: 48px;
 }
+
 .start-content .news__container__button__a {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: white;
   background-color: #d14342;
-  -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  text-decoration-color: transparent;
   color: white;
   cursor: pointer;
   padding: 8px 24px;
   border-radius: 0.5rem;
 }
+
 .start-content .news__container__button__a:hover {
   background-color: #a03232;
 }
@@ -487,9 +542,10 @@
   padding: 200px 0px 160px 0px;
   border-bottom: 8px solid #5085ff;
 }
+
 .news__container__h2 {
   width: 100%;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 30px;
@@ -500,9 +556,10 @@
   margin-top: 0px;
   margin-bottom: 56px;
 }
+
 .news__container__h2:before {
-  content: "Aktualności";
-  font-family: "Poppins", sans-serif;
+  content: 'Aktualności';
+  font-family: 'Poppins', sans-serif;
   font-size: 88px;
   font-weight: 700;
   line-height: 30px;
@@ -514,6 +571,7 @@
   margin-left: -300px;
   transform: translateZ(-1px);
 }
+
 .news__container__top {
   display: flex;
   justify-content: center;
@@ -522,6 +580,7 @@
   flex-wrap: wrap;
   gap: 32px;
 }
+
 .news__container__top__article {
   display: flex;
   justify-content: center;
@@ -530,11 +589,13 @@
   flex-wrap: wrap;
   max-width: 388px;
 }
+
 .news__container__top__article__icon {
   width: 388px;
-  height: 213.3333333333px;
+  height: calc(2/3 * 320px);
   margin-bottom: 16px;
 }
+
 .news__container__top__article__icon__img {
   width: 100%;
   height: 100%;
@@ -542,22 +603,24 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
+
 .news__container__top__article__title {
-  -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  text-decoration-color: transparent;
   color: black;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   color: black;
   margin-bottom: 8px;
 }
+
 .news__container__top__article__title:hover {
   opacity: 0.6;
 }
+
 .news__container__top__article__short {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
@@ -566,7 +629,7 @@
 }
 
 .date {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
@@ -576,4 +639,4 @@
 #lottie-icon {
   width: 400px;
   height: 400px;
-}/*# sourceMappingURL=start.css.map */
+}

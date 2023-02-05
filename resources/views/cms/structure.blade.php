@@ -3,6 +3,9 @@
 @section('cms-content')
 
 <!-- Menu Górne -->
+@if(session('status'))
+    <h6 class="alert alert-success">{{ session('status') }}</h6>
+@endif
 @foreach($structures as $structure)
 <h1 class="cms-structure-title">{{ $structure->title }}</h1>
 <table class="cms-table">

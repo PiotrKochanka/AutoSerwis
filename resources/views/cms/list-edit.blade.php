@@ -1,6 +1,9 @@
 @extends('home')
 
 @section('cms-content')
+@if(session('status'))
+    <h6 class="alert alert-success">{{ session('status') }}</h6>
+@endif
 <h3 class="cms-title">Edytuj element</h3>
 <form method="post" action="{{ url('home/zaktualizuj_element/'.$lists->id) }}" enctype="multipart/form-data">
     {{csrf_field()}}

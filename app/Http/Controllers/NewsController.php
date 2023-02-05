@@ -99,7 +99,7 @@ class NewsController extends Controller
 
         $news->save();
 
-        return redirect('/home');
+        return redirect("/home/aktualności")->with('status','Udało się dodać element');
     }
 
     /**

@@ -25,6 +25,9 @@
                         </form>
                     </li>
                     <li class="cms-container__content__main__col1__ul__li">
+                        <a class="dropdown-item" href="/home/uzytkownicy">Użytkownicy</a>
+                    </li>
+                    <li class="cms-container__content__main__col1__ul__li">
                         <a class="dropdown-item" href="/home/struktura">Struktura</a>
                     </li>
                 </ul>

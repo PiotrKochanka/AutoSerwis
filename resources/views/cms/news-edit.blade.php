@@ -10,6 +10,9 @@
     $today = $year . '-' . $month . '-' . $day;
     $newDate = date('Y-m-d', strtotime($today. ' + 1 months'))
 ?>
+@if(session('status'))
+    <h6 class="alert alert-success">{{ session('status') }}</h6>
+@endif
 <h3 class="cms-title">Nowa aktualność</h3>
 <form method="post" action="{{ url('home/save_news/'.$news->id) }}" enctype="multipart/form-data">
     {{csrf_field()}}

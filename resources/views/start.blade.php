@@ -147,7 +147,8 @@
                 </div>
                 <div class="additional__container__col2 additional__container__col">
                     <div class="additional__container__col2__img">
-                        <img src="../graphic/silnik.jpg" alt="Usługi serwisowe">
+                        {{-- <img src="../graphic/silnik.jpg" alt="Usługi serwisowe"> --}}
+                        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_iydzpcng.json"  background="transparent"  speed="1.75"  style="width: 800px; height: 800px; margin-top: -280px; margin-left: -160px;"  loop autoplay></lottie-player>
                     </div>
                 </div>
             </div>
@@ -183,7 +184,7 @@
             <div class="news__container width-1 block">
                 <h2 class="news__container__h2">Aktualności</h2>
                 <div class="news__container__top">
-                    @foreach($news->take(8) as $new)
+                    @foreach($news->take(6) as $new)
                         @if($new->stop >= Carbon\Carbon::now())
                             <article class="news__container__top__article news__container__top__startarticle">
                                 <div class="news__container__top__article__icon news__container__top__startarticle__icon">

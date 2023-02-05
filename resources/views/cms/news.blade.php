@@ -1,7 +1,9 @@
 @extends('home')
 
 @section('cms-content')
-
+@if(session('status'))
+    <h6 class="alert alert-success">{{ session('status') }}</h6>
+@endif
 <table class="cms-table">
     <thead>
         <tr>
