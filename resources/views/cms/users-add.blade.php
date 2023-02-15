@@ -1,12 +1,12 @@
 @extends('home')
 
 @section('cms-content')
-<h3 class="cms-title">Nowa aktualność</h3>
+<h3 class="cms-title">Nowy użytkownik</h3>
 <form method="post" action="{{ route('cms.zapisz_uzytkownika') }}" enctype="multipart/form-data">
     {{csrf_field()}}
     <div class="form__row">
         <div class="cms-title-element"><span>Imie</span></div>
-        <input type="text" name="name" placeholder="Wpisz tytuł">
+        <input type="text" name="name">
     </div>
     <div class="form__row">
         <div class="cms-title-element"><span>e-mail</span></div>

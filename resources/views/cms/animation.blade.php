@@ -1,7 +1,7 @@
 @extends('home')
 
 @section('cms-content')
-
+<h3 class="cms-title">Animacja</h3>
 <table class="cms-table">
     <thead>
         <tr>

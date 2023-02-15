@@ -6,6 +6,7 @@
 @if(session('status'))
     <h6 class="alert alert-success">{{ session('status') }}</h6>
 @endif
+<h3 class="cms-title">Struktura</h3>
 @foreach($structures as $structure)
 <h1 class="cms-structure-title">{{ $structure->title }}</h1>
 <table class="cms-table">

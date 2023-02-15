@@ -1,7 +1,7 @@
 @extends('home')
 
 @section('cms-content')
-<h3 class="cms-title">Nowy element animacji</h3>
+<h3 class="cms-title">Edytuj element animacji</h3>
 <form method="post" action="{{ url('home/zaktualizuj/'.$animations->id) }}" enctype="multipart/form-data">
   {{csrf_field()}}
   <div class="form__row">

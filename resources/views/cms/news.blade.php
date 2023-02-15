@@ -4,6 +4,7 @@
 @if(session('status'))
     <h6 class="alert alert-success">{{ session('status') }}</h6>
 @endif
+<h3 class="cms-title">Realizacje</h3>
 <table class="cms-table">
     <thead>
         <tr>

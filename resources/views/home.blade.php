@@ -30,6 +30,12 @@
                     <li class="cms-container__content__main__col1__ul__li">
                         <a class="dropdown-item" href="/home/struktura">Struktura</a>
                     </li>
+                    <li class="cms-container__content__main__col1__ul__li">
+                        <a class="dropdown-item" href="/home/galerie">Galerie</a>
+                    </li>
+                    <li class="cms-container__content__main__col1__ul__li">
+                        <a class="dropdown-item" href="/home/wyslij_pliki">Wyślij pliki</a>
+                    </li>
                 </ul>
                 <br/>
                 <div class="cms-container__content__main__col1__title">Moduły</div>
@@ -39,6 +45,12 @@
                     </li>
                     <li class="cms-container__content__main__col1__ul__li">
                         <a class="dropdown-item" href="/home/aktualności">Aktualności</a>
+                    </li>
+                    <li class="cms-container__content__main__col1__ul__li">
+                        <a class="dropdown-item" href="/home/aktualności">Realizacje</a>
+                    </li>
+                    <li class="cms-container__content__main__col1__ul__li">
+                        <a class="dropdown-item" href="/home/aktualności">Oferta</a>
                     </li>
                 </ul>
             </div>

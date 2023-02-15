@@ -4,6 +4,7 @@ use App\Http\Controllers\StartController;
 use App\Http\Controllers\StructureController;
 use App\Http\Controllers\AnimationController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\GalleriesController;
 use App\Models\News;
 use App\Models\Lists;
 use Illuminate\Support\Facades\Route;
@@ -84,4 +85,14 @@ Route::get('delete/{id}', [App\Http\Controllers\DeleteUserController::class, 'de
 Route::get('users/edytuj_uzytkownika/{id}', [App\Http\Controllers\UserController::class, 'showData']);
 Route::post('users/edytuj_uzytkownika', [App\Http\Controllers\UserController::class, 'update']);
 
+// Galerie
+Route::get('/home/galerie', [GalleriesController::class, 'index']);
+Route::get('/home/galerie/dodaj_galerie', [GalleriesController::class, 'create'])->name('cms.dodaj_galerie');
+Route::post('/home/galerie/zapisz', [GalleriesController::class, 'store'])->name('cms.zapisz_galerie');
 
+// Galeria
+Route::get('/home/galerie/{id}', [GalleriesController::class, 'inside']);
+
+// Wyślij pliki do galerii
+Route::get('/home/wyslij_pliki', [GalleriesController::class, 'send'])->name('cms.dodaj_plik');
+Route::post('/home/zapisz_pliki', [GalleriesController::class, 'push'])->name('cms.zapisz_plik');

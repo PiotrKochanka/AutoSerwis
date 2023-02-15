@@ -13,7 +13,7 @@
 @if(session('status'))
     <h6 class="alert alert-success">{{ session('status') }}</h6>
 @endif
-<h3 class="cms-title">Nowa aktualność</h3>
+<h3 class="cms-title">Edytuj aktualność</h3>
 <form method="post" action="{{ url('home/save_news/'.$news->id) }}" enctype="multipart/form-data">
     {{csrf_field()}}
     <div class="form__row">
