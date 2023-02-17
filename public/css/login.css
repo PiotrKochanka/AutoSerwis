@@ -112,8 +112,7 @@
   background-color: #326fff;
 }
 .login-container__login__content__card__body__login__content__link {
-  -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  text-decoration-color: transparent;
   color: #195eff;
   font-family: "Poppins", sans-serif;
   font-size: 14px;

@@ -15,7 +15,6 @@
 }
 .subpage-container__content img {
   max-width: 100%;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }
@@ -45,8 +44,7 @@
   line-height: 24px;
   color: white;
   background-color: #d14342;
-  -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  text-decoration-color: transparent;
   color: white;
   cursor: pointer;
   padding: 8px 24px;
@@ -74,8 +72,7 @@
   flex-direction: column;
 }
 .subpage-container .archive__container__top__article__text__title {
-  -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  text-decoration-color: transparent;
   color: black;
   font-family: "Poppins", sans-serif;
   font-size: 18px;

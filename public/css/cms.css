@@ -11,8 +11,7 @@
   list-style-type: none;
 }
 .cms-container__content__header__content__ul__li a {
-  -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  text-decoration-color: transparent;
   color: white;
   background-color: rgb(73, 73, 73);
   padding: 0px 24px;
@@ -70,8 +69,7 @@
   color: white;
   padding: 8px 12px;
   border-radius: 0.5rem;
-  -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  text-decoration-color: transparent;
   color: white;
 }
 .cms-container__content__main__col1__ul__li a:hover {
@@ -148,8 +146,7 @@
   font-weight: 400;
   line-height: 26px;
   color: white;
-  -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  text-decoration-color: transparent;
   color: white;
   background-color: #5085ff;
   padding: 8px 12px;

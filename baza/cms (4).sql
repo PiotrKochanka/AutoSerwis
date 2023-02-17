@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 04 Lut 2023, 13:42
+-- Czas generowania: 17 Lut 2023, 14:27
 -- Wersja serwera: 10.4.27-MariaDB
 -- Wersja PHP: 8.0.25
 
@@ -41,8 +41,7 @@ CREATE TABLE `animations` (
 
 INSERT INTO `animations` (`id`, `title`, `filenames`, `created_at`, `updated_at`) VALUES
 (50, 'Samochody to Nasza pasja!', '1673217083-s5.jpeg', '2023-01-08 21:09:38', '2023-01-08 21:31:23'),
-(52, 'Samochody to Nasza pasja!', '1673217064-s4.jpeg', '2023-01-08 21:31:04', '2023-01-08 21:31:04'),
-(53, 'LOorem ipsum', '1673626422-AdobeStock_441283052.jpeg', '2023-01-12 14:13:05', '2023-01-13 15:13:42');
+(52, 'Samochody to Nasza pasja!', '1675979022-AdobeStock_403247827.jpeg', '2023-01-08 21:31:04', '2023-02-09 20:43:42');
 
 -- --------------------------------------------------------
 
@@ -78,6 +77,67 @@ CREATE TABLE `failed_jobs` (
   `exception` longtext NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `files`
+--
+
+CREATE TABLE `files` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `galleryId` bigint(20) UNSIGNED NOT NULL,
+  `filename` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Zrzut danych tabeli `files`
+--
+
+INSERT INTO `files` (`id`, `galleryId`, `filename`, `created_at`, `updated_at`) VALUES
+(53, 1, 'AdobeStock_359514035.jpeg', NULL, NULL),
+(54, 1, 'AdobeStock_403247827.jpeg', NULL, NULL),
+(55, 1, '0', '2023-02-15 19:03:05', '2023-02-15 19:03:05'),
+(56, 2, 'AdobeStock_217240001.jpeg', NULL, NULL),
+(57, 2, 'default_offer.jpg', NULL, NULL),
+(58, 2, '0', '2023-02-15 19:03:16', '2023-02-15 19:03:16'),
+(59, 3, 'images.jpg', NULL, NULL),
+(60, 3, 'logo.jpeg', NULL, NULL),
+(61, 3, 'pngtree-car-repair-service-vignette-png-image_6072852.jpg', NULL, NULL),
+(62, 3, '0', '2023-02-15 19:03:31', '2023-02-15 19:03:31'),
+(63, 4, 'images.jpg', NULL, NULL),
+(64, 4, 'tlo_uslugi.jpg', NULL, NULL),
+(65, 4, 'uslugi_tlo.jpg', NULL, NULL),
+(66, 4, '0', '2023-02-15 19:03:43', '2023-02-15 19:03:43'),
+(67, 4, 'tlo_instrukcja.jpg', NULL, NULL),
+(68, 4, 'tlo_o_nas (1).png', NULL, NULL),
+(69, 4, 'tlo_o_nas.png', NULL, NULL),
+(70, 4, '0', '2023-02-15 19:22:07', '2023-02-15 19:22:07');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `galleries`
+--
+
+CREATE TABLE `galleries` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Zrzut danych tabeli `galleries`
+--
+
+INSERT INTO `galleries` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'Test', NULL, NULL),
+(2, 'Test2', NULL, NULL),
+(3, 'Test3', NULL, NULL),
+(4, 'Nowa Galeria', '2023-02-15 18:31:17', '2023-02-15 18:31:17');
 
 -- --------------------------------------------------------
 
@@ -125,7 +185,9 @@ INSERT INTO `lists` (`id`, `position`, `menu`, `filenames`, `title`, `link`, `co
 (43, '06. Usługi dodatkowe', 'informacja', '1675192840-serwis.png', 'Test3', NULL, '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>', '2023-01-31 18:20:40', '2023-01-31 18:20:51'),
 (44, '07. Stopka', 'informacja', '1675193294-ikona-telefon.png', 'Kontakt', NULL, '<p><strong>Telefon Serwis:</strong>+48 513 223 139</p>\r\n<p><strong>Telefon Metamorfoza:</strong>+48 513 223 139</p>\r\n<p><strong>Telefon Wynajem:</strong>+48 513 223 139</p>\r\n<p><strong>E-mail:</strong>&nbsp;autoserwis@serwiss.com</p>', '2023-01-31 18:28:14', '2023-01-31 18:28:24'),
 (45, '07. Stopka', 'informacja', '1675193323-ikona-zegar.png', 'Godziny otwarcia', NULL, '<p><strong>Poniedziałek:</strong>&nbsp;7:00 - 19:00</p>\r\n<p><strong>Wtorek:</strong>&nbsp;7:00 - 19:00</p>\r\n<p><strong>Środa:</strong>&nbsp;7:00 - 19:00</p>\r\n<p><strong>Czwartek:</strong>&nbsp;7:00 - 19:00</p>\r\n<p><strong>Piątek:</strong>&nbsp;7:00 - 19:00</p>\r\n<p><strong>Sobota:</strong>&nbsp;9:00 - 13:00</p>', '2023-01-31 18:28:43', '2023-01-31 18:28:54'),
-(46, '07. Stopka', 'informacja', '1675193351-ikona-marker.png', 'Lokalizacja', NULL, '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>', '2023-01-31 18:29:11', '2023-01-31 18:29:25');
+(46, '07. Stopka', 'informacja', '1675193351-ikona-marker.png', 'Lokalizacja', NULL, '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>', '2023-01-31 18:29:11', '2023-01-31 18:29:25'),
+(47, '02. Menu Górne', 'link', NULL, 'Testowy link', 'https://github.com/', NULL, '2023-02-09 20:23:14', '2023-02-09 20:23:14'),
+(48, '02. Menu Górne', 'informacja', NULL, 'Test Info', NULL, '<h3>The standard Lorem Ipsum passage, used since the 1500s</h3>\r\n<p>\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"</p>\r\n<h3>Section 1.10.32 of \"de Finibus Bonorum et Malorum\", written by Cicero in 45 BC</h3>\r\n<p>\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\"</p>\r\n<h3>1914 translation by H. Rackham</h3>\r\n<p>\"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\"</p>\r\n<h3>Section 1.10.33 of \"de Finibus Bonorum et Malorum\", written by Cicero in 45 BC</h3>\r\n<p>\"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\"</p>', '2023-02-09 20:25:15', '2023-02-09 20:28:10');
 
 -- --------------------------------------------------------
 
@@ -152,7 +214,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (6, '2023_01_09_124603_create_news_table', 3),
 (7, '2023_01_11_211410_create_lists_table', 4),
 (8, '2023_01_27_194100_create_socials_table', 5),
-(9, '2023_01_27_205752_create_structures_table', 6);
+(9, '2023_01_27_205752_create_structures_table', 6),
+(10, '2023_02_15_190327_create_galleries_table', 7),
+(11, '2023_02_15_190653_create_files_table', 8);
 
 -- --------------------------------------------------------
 
@@ -176,11 +240,9 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `start`, `stop`, `title`, `filenames`, `content`, `created_at`, `updated_at`) VALUES
-(6, '2023-01-10', '2023-02-25', 'Lorem ipsum', '1674857947-s2.jpeg', '<div>\r\n<h2>Lorem ipsum</h2>\r\n</div>\r\n<div>\r\n<p>&nbsp;</p>\r\n</div>', '2023-01-10 12:44:52', '2023-01-27 21:19:07'),
-(7, '2023-01-10', '2023-02-23', 'Lorem ipsum dori', '1673358430-AdobeStock_441283052.jpeg', '<div>\r\n<h2>What is Lorem Ipsum?????</h2>\r\n<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n</div>\r\n<div>\r\n<h2>Why do we use it?</h2>\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n</div>\r\n<p>&nbsp;</p>\r\n<div>\r\n<h2>Where does it come from?</h2>\r\n<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.</p>\r\n<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>\r\n</div>', '2023-01-10 12:47:10', '2023-01-10 13:32:16'),
-(8, '2023-01-03', '2023-01-09', 'Lorem ipsum przykładowe', '1674998394-s5.jpeg', '<h3>The standard Lorem Ipsum passage, used since the 1500s</h3>\r\n<p>\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"</p>\r\n<h3>Section 1.10.32 of \"de Finibus Bonorum et Malorum\", written by Cicero in 45 BC</h3>\r\n<p>\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\"</p>\r\n<h3>1914 translation by H. Rackham</h3>\r\n<p>\"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\"</p>', '2023-01-10 17:23:47', '2023-01-29 12:19:54'),
-(12, '2023-01-29', '2023-03-01', 'Test', '1674998581-s3.jpeg', '<p>Strona jest przygotowywana...</p>', '2023-01-29 12:23:01', '2023-01-29 12:23:01'),
-(13, '2023-01-29', '2023-03-01', 'test', '1674998592-s1.jpeg', '<p>Strona jest przygotowywana...</p>', '2023-01-29 12:23:12', '2023-01-29 12:23:12');
+(15, '2023-02-09', '2023-03-09', 'Lorem ipsum dolor sit amet', '1675979128-AdobeStock_217240001.jpeg', '<p>Strona jest przygotowywana...</p>', '2023-02-09 20:45:28', '2023-02-09 20:45:28'),
+(16, '2023-02-09', '2023-03-09', 'Lorem ipsum dolor sit amet', '1675979134-AdobeStock_217240001.jpeg', '<p>Strona jest przygotowywana...</p>', '2023-02-09 20:45:34', '2023-02-09 20:45:34'),
+(17, '2023-02-09', '2023-03-09', 'Lorem ipsum dolor sit amet', '1675979141-AdobeStock_217240001.jpeg', '<p>Strona jest przygotowywana...</p>', '2023-02-09 20:45:41', '2023-02-09 20:45:41');
 
 -- --------------------------------------------------------
 
@@ -251,6 +313,7 @@ CREATE TABLE `users` (
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
+  `phone` int(255) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
   `remember_token` varchar(100) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -261,8 +324,10 @@ CREATE TABLE `users` (
 -- Zrzut danych tabeli `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Piotr', 'kochankap@gmail.com', NULL, '$2y$10$eDpDwOVf6LNJ1yve9Pkv1.g7M387AXztH8dLpk9CPpqq7PIw7ywG.', 'IvCaykRGYo5yLJYjCZnQVKGECU78M3l2rERSeCMjkS3OsWSC1CJeRaDgutf1', '2023-01-06 12:10:54', '2023-01-06 12:10:54');
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `phone`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Piotr', 'kochankap@gmail.com', NULL, NULL, '$2y$10$eDpDwOVf6LNJ1yve9Pkv1.g7M387AXztH8dLpk9CPpqq7PIw7ywG.', '5twlTZiUeYcvu0RTgPubfx4ABnlNDCS8xWuFKeL7SMlUfgJw7x2UQtnuvKAr', '2023-01-06 12:10:54', '2023-01-06 12:10:54'),
+(2, 'Karol', 'karol@o2.pl', NULL, 543478245, '$2y$10$vLXCXQKiziQaKg/5lYXyS.r768PV7dDU1EWygP7rZvLSG55tWptiq', NULL, '2023-02-09 20:16:05', '2023-02-09 20:16:05'),
+(3, 'Piotr', 'Piotr.Kochanka@onet.pl', NULL, 574910757, '$2y$10$rf6iixt7.zCFWxZ3KUuTGeoMYGG4Lj4UywaWbcpd2gbl83dg3sb2e', NULL, '2023-02-09 20:17:13', '2023-02-09 20:17:13');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -287,6 +352,19 @@ ALTER TABLE `cores`
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Indeksy dla tabeli `files`
+--
+ALTER TABLE `files`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `galleryId` (`galleryId`);
+
+--
+-- Indeksy dla tabeli `galleries`
+--
+ALTER TABLE `galleries`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeksy dla tabeli `lists`
@@ -358,22 +436,34 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT dla tabeli `files`
+--
+ALTER TABLE `files`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+
+--
+-- AUTO_INCREMENT dla tabeli `galleries`
+--
+ALTER TABLE `galleries`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT dla tabeli `lists`
 --
 ALTER TABLE `lists`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT dla tabeli `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT dla tabeli `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT dla tabeli `personal_access_tokens`
@@ -391,7 +481,17 @@ ALTER TABLE `structures`
 -- AUTO_INCREMENT dla tabeli `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Ograniczenia dla zrzutów tabel
+--
+
+--
+-- Ograniczenia dla tabeli `files`
+--
+ALTER TABLE `files`
+  ADD CONSTRAINT `files_ibfk_1` FOREIGN KEY (`galleryId`) REFERENCES `galleries` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

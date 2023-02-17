@@ -88,7 +88,7 @@ class GalleriesController extends Controller
     public function inside($id)
     {
         $galleries = Gallery::find($id);
-        $files = Files::all();
+        $files = Files::all()->where('galleryId', '=', $id);
 
         return view('cms.galleries-files', [
             'galleries' => $galleries,

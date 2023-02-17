@@ -16,7 +16,7 @@
         </select>
     </div>
     <div class="form__row">
-        <div class="cms-title-element"><span>Grafiki</span></div>
+        <div class="cms-title-element"><span>Pliki</span></div>
         <input class="file" type="file" name="filename[]" multiple>
     </div>
   <button type="submit" class="form__button" style="margin-top:10px">Dodaj</button>

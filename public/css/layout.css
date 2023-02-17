@@ -75,8 +75,7 @@ header .header-data__container__datas p {
   gap: 4px;
 }
 header .header-data__container__datas a {
-  -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  text-decoration-color: transparent;
   color: white;
 }
 header .header-data__container__datas a:hover {
@@ -146,8 +145,7 @@ header .header-main__container__menu__menu-top-1-level {
   gap: 48px;
 }
 header .header-main__container__menu__menu-top-1-level li a {
-  -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  text-decoration-color: transparent;
   color: black;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -241,8 +239,7 @@ header .header-main__container__menu__menu-top-1-level li a:hover:after {
   gap: 32px;
 }
 .footer__bottom__container__project a {
-  -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  text-decoration-color: transparent;
   color: white;
 }
 .footer__bottom__container__project a:hover {

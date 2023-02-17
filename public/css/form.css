@@ -38,8 +38,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  text-decoration-color: transparent;
   color: #5085ff;
 }
 .cms-table tbody tr td a .fa-eye {
