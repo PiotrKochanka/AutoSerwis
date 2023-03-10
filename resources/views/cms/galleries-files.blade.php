@@ -20,7 +20,7 @@
                     <td><div class="wrapper"><a data-fancybox="gallery" href='{{ asset("gallery/photogallery/".$file->filename) }}'><img src='{{ asset("gallery/photogallery/".$file->filename) }}'></div></td>
                     <td>{{ $file->filename }}</td>
                     <td><button><i class="fa fa-eye" style="font-size: 18px"></i></a></td>
-                    <td><a href="/home/usun-aktualnosc/{{ $file->id }}"><i class="fa fa-trash" style="font-size: 18px"></i></a></td>
+                    <td><a href="/home/usun-zdjecie/{{ $file->id }}"><i class="fa fa-trash" style="font-size: 18px"></i></a></td>
                 </tr>
             @endif
         @endforeach

@@ -7,6 +7,7 @@
                 <ul class="cms-container__content__header__content__ul">
                     <li class="cms-container__content__header__content__ul__li"><a href="/" target="[_blank]" title="Przejdź do strony">Przejdź do strony</a></li>
                 </ul>
+                <div class="menu-mobile__block__button"><div class="menu-mobile__block__button__burger"><span></span><span></span><span></span><span></span></div></div>
             </div>
         </header>
         <div class="cms-container__content__main">
@@ -47,7 +48,7 @@
                         <a class="dropdown-item" href="/home/aktualności">Aktualności</a>
                     </li>
                     <li class="cms-container__content__main__col1__ul__li">
-                        <a class="dropdown-item" href="/home/aktualności">Realizacje</a>
+                        <a class="dropdown-item" href="/home/realizacje">Realizacje</a>
                     </li>
                     <li class="cms-container__content__main__col1__ul__li">
                         <a class="dropdown-item" href="/home/aktualności">Oferta</a>

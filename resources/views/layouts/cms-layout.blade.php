@@ -13,6 +13,7 @@
     <script type="text/javascript" src="{{ URL::asset('js/header.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/paralax.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/form.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/mobile.js') }}"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
     <script src="{{ URL::asset('js/tinymce/tinymce.min.js') }}"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -26,6 +27,7 @@
     <link rel="stylesheet" href="/css/form.css">
     <link rel="stylesheet" href="/css/structure.css">
     <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/mobile.css">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 

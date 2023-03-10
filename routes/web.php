@@ -5,8 +5,10 @@ use App\Http\Controllers\StructureController;
 use App\Http\Controllers\AnimationController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\GalleriesController;
+use App\Http\Controllers\RealizationsController;
 use App\Models\News;
 use App\Models\Lists;
+use App\Models\Realization;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +30,8 @@ Route::get('/', [StartController::class, 'index']);
 
 Route::get('/lista-aktualności', [NewsController::class, 'list']);
 Route::get('/lista-aktualności-archiwum', [NewsController::class, 'archive']);
+
+Route::get('/lista-realizacji', [RealizationsController::class, 'list']);
 
 Auth::routes();
 
@@ -76,6 +80,19 @@ foreach($news as $new){
     Route::get('/'.$new->title.'-'.$new->id, [StartController::class, 'subpage']);
 }
 
+// Realizacje CMS
+Route::get('/home/realizacje', [RealizationsController::class, 'index']);
+Route::get('/home/realizacje/dodaj-realizacje', [RealizationsController::class, 'create'])->name('cms.dodaj_realizacje');
+Route::post('/home/realizacje/zapisz-realizacje', [RealizationsController::class, 'store'])->name('cms.zapisz_realizacje');
+Route::get('/home/delete-records', [RealizationsController::class, 'index']);
+Route::get('/home/usun-realizacje/{id}', [RealizationsController::class, 'destroy']);
+
+$realizations = Realization::all();
+foreach($realizations as $realization){
+    Route::get('/'.$realization->title.'-'.$realization->id, [StartController::class, 'realizationSubpage']);
+}
+
+
 // Użytkownicy
 Route::get('/home/uzytkownicy', [App\Http\Controllers\UserController::class, 'index'])->name('users');
 Route::get('/home/uzytkownicy/dodaj-uzytkownika', [App\Http\Controllers\UserController::class, 'create'])->name('cms.dodaj_uzytkownika');
@@ -92,6 +109,8 @@ Route::post('/home/galerie/zapisz', [GalleriesController::class, 'store'])->name
 
 // Galeria
 Route::get('/home/galerie/{id}', [GalleriesController::class, 'inside']);
+Route::get('/home/delete-records', [GalleriesController::class, 'inside']);
+Route::get('/home/usun-zdjecie/{id}', [GalleriesController::class, 'destroy']);
 
 // Wyślij pliki do galerii
 Route::get('/home/wyslij_pliki', [GalleriesController::class, 'send'])->name('cms.dodaj_plik');

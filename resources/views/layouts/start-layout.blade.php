@@ -14,6 +14,7 @@
     <script type="text/javascript" src="{{ URL::asset('js/paralax.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/form.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/lottiefiles.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/mobile.js') }}"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
@@ -24,6 +25,7 @@
     <link rel="stylesheet" href="/css/start.css">
     <link rel="stylesheet" href="/css/subpage.css">
     <link rel="stylesheet" href="/css/fontawesome.css">
+    <link rel="stylesheet" href="/css/mobile.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
 
@@ -34,6 +36,35 @@
     <title>Auto Serwis</title>
 </head>
 <body>
+    <!--Menu mobilne-->
+    <nav id="menu-mobile" class="menu-mobile">
+        <div class="menu-mobile__block">
+            <a class="menu-mobile__block__logo" href="/"><img src="{{ asset('graphic/logo.webp') }}" alt="logo"></a>
+            <div class="menu-mobile__block__button"><div class="menu-mobile__block__button__burger"><span></span><span></span><span></span><span></span></div></div>
+        </div>
+        <div class="menu-mobile__block__menu">
+            <ul class="menu-mobile__block__menu__ul">
+                @foreach(\App\Models\Lists::all() as $list)
+                    @if($list->position === "02. Menu Górne")
+                        @if($list->menu == "informacja")
+                            <li class="menu-mobile__block__menu__ul__info menu-mobile__block__menu__ul__info__li"><a href="/{{ $list->title }}-{{ $list->id }}" alt="{{ $list->title }}">{{ $list->title }}</a></li>
+                        @elseif($list->menu == "link")
+                            <li class="menu-mobile__block__menu__ul__link menu-mobile__block__menu__ul__info__li"><a href="{{ $list->link }}" alt="{{ $list->title }}" target="_blank" class="header-main__container__menu__menu-top-1-level__link">{{ $list->title }}</a></li>
+                        @elseif($list->menu == "aktualnosci")
+                            <li class="menu-mobile__block__menu__ul__link menu-mobile__block__menu__ul__info__li"><a href="/lista-aktualności" alt="{{ $list->title }}">{{ $list->title }}</a></li>
+                        @else 
+                            <li class="menu-mobile__block__menu__ul__menu menu-mobile__block__menu__ul__info__li">
+                                <button>{{ $list->title }}</button>
+                                <ul>
+                                
+                                </ul>
+                            </li>
+                        @endif
+                    @endif
+                @endforeach
+            </ul>
+        </div>
+    </nav>
     <div class="container">
         <header class="width-100">
             <div class="header-data width-100">
@@ -126,7 +157,7 @@
             <div class="footer__bottom width-100">
                 <div class="footer__bottom__container width-1 block">
                     <div class="footer__bottom__container__project">
-                        <p>Projekt i wykonanie:  Piotr Kochanka</p>
+                        <p>Projekt i wykonanie:  Piotr Kochanka, Marius Płóciennik</p>
                         <p>Zarządzanie: <a href="/login" title="CMS"> CMS</a></p>
                     </div>
                     <div class="footer__bottom__contailer__wcag">

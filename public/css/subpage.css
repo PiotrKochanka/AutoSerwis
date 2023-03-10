@@ -13,6 +13,25 @@
 .subpage-container__content {
   padding-top: 180px;
 }
+.subpage-container__content__gallery {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.subpage-container__content__gallery__photos {
+  width: 300px;
+  height: 300px;
+}
+.subpage-container__content__gallery__photos__img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
 .subpage-container__content img {
   max-width: 100%;
   height: -moz-max-content;

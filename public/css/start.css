@@ -426,7 +426,7 @@
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top;
 }
 .start-content .news__container__top__startarticle__title {
   text-decoration-color: transparent;

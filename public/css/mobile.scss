@@ -1,0 +1,315 @@
+@import '_mixins';
+
+#menu-mobile{
+    display: none;
+}
+
+@media all and (min-width: 0px) and (max-width: 639px) {
+
+}
+
+@media all and (min-width: 320px) and (max-width: 1023px) {
+    .cms-img-container img{
+        max-width: 309px;
+    }
+    .cms-container__content__main__col1{
+        z-index: 9;
+    }
+    .subpage-container__content__gallery__photos {
+        width: 40%;
+        height: 150px;
+    }
+    .subpage-container__content__all{
+        padding: 24px 16px;
+    }
+    .cms-container__content__main__col2 form .form__row .cms-title-element{
+        min-width: 40%;
+        max-width: 40%;
+    }
+    .cms-container__content__main__col2{
+        overflow-x:scroll;
+        max-width: 89vw;
+        margin-top: 24px!important;
+        padding-bottom: 32px!important;
+        margin: 0 auto;
+    }
+    .cms-container__content__header__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .cms-container__content__main__col2{
+        padding: 0px;
+    }
+    .cms-container__content__main__col1{
+        position: fixed;
+        left: -100vw;
+        transition: 0.3s;
+    }
+    .cms-container__content__main__col1__click{
+        left: 0vw;
+    }
+    .cms-container__content__header{
+        display: flex!important;
+    }
+    .date{
+        margin-left: 16px;
+    }
+    .subpage-container__content{
+        padding-top: 120px;
+    }
+    .subpage-container__content__all{
+        width: 92.5%;
+        & p{
+            max-width: 100%;
+            padding: 0 16px;
+        }
+    }
+    .news__container__top__article{
+        width: 100%;
+    }
+    .subpage-container h1{
+        text-align: center;
+        line-height: 40px;
+    }
+    .news{
+        padding-top: 120px;
+    }
+    .subpage-container{
+        padding-bottom: 64px;
+    }
+    .footer__bottom__container__project{
+        flex-wrap: wrap;
+        gap: 0px;
+        justify-content: center;
+        & p{
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .column{
+        width: 340px;
+    }
+    .footer__container{
+        flex-wrap: wrap;
+        padding: 64px 16px;
+    }
+    .map__title{
+        display: none;
+    }
+    .start-content .news__container__top__startarticle, .news__container__top__article{
+        padding: 0 16px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .start-content .news__container__top__startarticle__icon, .subpage-container .news__container__top, .news__container__top__article__icon{
+        width: 100%;
+    }
+    .offer__container__offers__article, .start-content .news__container__top{
+        width: 100%;
+    }
+    .start-content .offer__container__offers{
+        flex-wrap: wrap;
+        padding: 0 16px;
+    }
+    .start-content .offer__container__offers__startarticle__icon{
+        width: 100%;
+    }
+    .start-content .service__h2:before, .start-content .additional__h2:before{
+        content: "Usługi serwisowe";
+        font-family: "Poppins", sans-serif;
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 48px;
+        color: rgba(0, 0, 0, 0.048);
+        position: absolute;
+        top: -26px;
+        left: 15px;
+        transform: translateZ(-1px);
+    }
+    .start-content .news__container__h2:before{
+        font-size: 56px;
+    }
+    .start-content .service, .start-content .additional, .start-content .offer, .start-content .news {
+        padding: 64px 0 64px 0;
+    }
+    .start-content .additional{
+        background-image: none;
+    }
+    .start-content .service__h2, .start-content .additional__h2{
+        text-align: center;
+    }
+    .start-content .service__container__col, .start-content .additional__container__col{
+        width: 100%;
+        padding: 0 16px;
+    }
+    .service__container__col1, .additional__container__col2{
+        display: none;
+    }
+    .about-us__movies__movie{
+        max-width: 100%;
+        & iframe{
+            max-width: 100%;
+        }
+    }
+    .start-content .about-us{
+        padding-top: 64px;
+        padding-bottom: 100px;
+    }
+    #lottie-bg{
+        display: none;
+    }
+    .width-1{
+        width: 100%;
+    }
+    .mid-info{
+        margin-top: 24px;
+        &__container{
+            flex-wrap: wrap!important;
+            gap: 24px;
+        }
+    }
+    .animation-container__mid__main__text{
+        margin-left: 0;
+        left: 16px;
+        bottom: 64px;
+        top:auto;
+        & span{
+            font-size: 44px;
+            line-height: 50px;
+        }
+        &:before{
+            display: none;
+        }
+    }
+    .start-content .mid-info__container{
+        margin-top: 0px;
+    }
+    #menu-mobile{
+        display: block;
+    }
+    header{
+        display: none;
+    }
+    .menu-mobile{
+        position: fixed;
+        top: 0px;
+        z-index: 99;
+
+        &__block{
+            height: 70px;
+            background-color: white;
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            -webkit-box-shadow: 0px 4px 7px -2px rgb(0 0 0 / 43%);
+            box-shadow: 0px 4px 7px -7px rgb(0 0 0 / 43%);
+            &__menu__click{
+                left: 0vw!important;
+            }
+            &__menu{
+                background: #ececec;
+                color: black;
+                width: 100vw;
+                height: 100vh;
+                position: fixed;
+                z-index: 1002;
+                left: -101vw;
+                top: 70px;
+                transition: all 0.5s;
+                max-width: 100%;
+                margin-left:0px;
+                &__ul{
+                    margin:0px;
+                    padding: 0px 0px 60px 0px;
+                    width: 100%;
+                    height: 100vh;
+                    display: block;
+                    margin: 0px auto;
+                    padding: 0px;
+                    position: relative;
+                    overflow-y: auto;
+                    & > li{
+                        list-style: none;
+                        border-bottom: 1px solid rgba(0,0,0,0.15);
+                    }
+                    & li{
+                        max-width: 94%;
+                        margin: 0 auto;
+                        padding: 0px;
+                        & a{
+                            padding: 10px 8px;
+                            margin: 0px;
+                            display: block;
+                            color: black;
+                            text-decoration-color: transparent;
+                            font-size: 18px;
+                            font-family: 'Poppins', sans-serif;
+                        }
+                    }
+                }
+            }
+            &__logo{
+                & img{
+                    max-height: 60px;
+                    margin-left: -12px;
+                    margin-top: 5px;
+                }
+            }
+            &__button{
+                &__burger__open{
+                    & span{
+                        &:nth-child(1){
+                            top: 12px;
+                            width: 0%;
+                            left: 50%;
+                        }
+                        &:nth-child(2){
+                            transform: rotate(45deg);
+                        }
+                        &:nth-child(3){
+                            transform: rotate(-45deg);
+                        }
+                        &:nth-child(4){
+                            top: 12px;
+                            width: 0%;
+                            left: 50%;
+                        }
+                    }
+                }
+                &__burger{
+                    width: 32px;
+                    height: 24px;
+                     position: relative;
+                    margin: 8px 16px 8px auto;
+                    transform: rotate(0deg);
+                    transition: .5s ease-in-out;
+                    cursor: pointer;
+                    & span{
+                        display: block;
+                        position: absolute;
+                        height: 3px;
+                         width: 100%;
+                        background: #9e9e9e;
+                        border-radius: 10px;
+                        opacity: 1;
+                        left: 0;
+                        transform: rotate(0deg);
+                        transition: .25s ease-in-out;
+                        &:nth-child(1){
+                            top: 0px;
+                        }
+                        &:nth-child(2), &:nth-child(3){
+                            top: 10px;
+                        }
+                        &:nth-child(4){
+                            top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

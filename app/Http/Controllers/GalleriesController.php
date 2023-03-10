@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Gallery;
 use App\Models\Files;
+use File;
+use DB;
 
 use Illuminate\Http\Request;
 
@@ -94,5 +96,18 @@ class GalleriesController extends Controller
             'galleries' => $galleries,
             'files' => $files,
         ], compact('files'));
+    }
+
+    public function destroy($id)
+    {
+        $files = Files::find($id);
+
+        $destination = 'gallery/photogallery/'.$files->filename;
+        if(File::exists($destination))
+        {
+            File::delete($destination);
+        }
+        DB::delete('delete from files where id = ?',[$id]);
+        return redirect()->back()->with('status','Rekord został usunięty pomyślnie');
     }
 }

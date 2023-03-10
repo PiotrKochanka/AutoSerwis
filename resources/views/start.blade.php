@@ -158,24 +158,17 @@
             <div class="offer__container width-1 block">
                 <h2 class="offer__container__h2">Nasze realizacje</h2>
                 <div class="offer__container__offers">
-                    <article class="offer__container__offers__article offer__container__offers__startarticle">
-                        <div class="offer__container__offers__article__icon offer__container__offers__startarticle__icon">
-                            <div style="background-image: url({{ asset('graphic/default_offer.jpg') }});" class="offer__container__offers__article__icon__img offer__container__offers__startarticle__icon__img"></div>
-                        </div>
-                        <a href="#" class="offer__container__offers__article__title offer__container__offers__startarticle__title">Lorem ipsum dolor sit amet</a>
-                    </article>
-                    <article class="offer__container__offers__article offer__container__offers__startarticle">
-                        <div class="offer__container__offers__article__icon offer__container__offers__startarticle__icon">
-                            <div style="background-image: url({{ asset('graphic/default_offer.jpg') }});" class="offer__container__offers__article__icon__img offer__container__offers__startarticle__icon__img"></div>
-                        </div>
-                        <a href="#" class="offer__container__offers__article__title offer__container__offers__startarticle__title">Lorem ipsum dolor sit amet</a>
-                    </article>
-                    <article class="offer__container__offers__article offer__container__offers__startarticle">
-                        <div class="offer__container__offers__article__icon offer__container__offers__startarticle__icon">
-                            <div style="background-image: url({{ asset('graphic/default_offer.jpg') }});" class="offer__container__offers__article__icon__img offer__container__offers__startarticle__icon__img"></div>
-                        </div>
-                        <a href="#" class="offer__container__offers__article__title offer__container__offers__startarticle__title">Lorem ipsum dolor sit amet</a>
-                    </article>
+                    @foreach($realizations->take(3) as $realization)
+                        <article class="offer__container__offers__article offer__container__offers__startarticle">
+                            <div class="offer__container__offers__article__icon offer__container__offers__startarticle__icon">
+                                <div style="background-image: url({{ asset("gallery/news/".$realization->filenames) }})" class="news__container__top__article__icon__img news__container__top__startarticle__icon__img"></div>
+                            </div>
+                            <a href="/{{ $realization->title }}-{{ $realization->id }}" class="offer__container__offers__article__title offer__container__offers__startarticle__title">{{ $realization->title }}</a>
+                        </article>
+                    @endforeach
+                </div>
+                <div class="news__container__button">
+                    <a href="/lista-realizacji" class="news__container__button__a">Zobacz więcej</a>
                 </div>
             </div>
         </div>

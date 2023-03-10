@@ -167,12 +167,6 @@ class NewsController extends Controller
         return redirect()->back()->with('status','Dane zostały zmienione pomyślnie');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $news = News::find($id);
