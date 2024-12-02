@@ -40,4 +40,4 @@ Projekt strony internetowej o tematyce motoryzacyjnej stworzony w Laravel, SCSS,
 
 1. **Sklonuj repozytorium:**
    ```bash
-   git clone https://github.com/twoja-nazwa-uzytkownika/strona-motoryzacyjna.git
+   git clone https://github.com/PiotrKochanka/AutoSerwis.git
